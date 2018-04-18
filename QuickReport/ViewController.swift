@@ -7,14 +7,22 @@
 //
 
 import UIKit
+import MessageUI
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
+    
+    @IBOutlet weak var projectName: UITextView!
+    @IBOutlet weak var builder: UITextView!
     
     let keyName = "uname"
     let defaults = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func sendMail(_ sender: Any) {
+        sendEmail()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,11 +59,22 @@ class ViewController: UIViewController {
         present(alert, animated: true)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func sendEmail() {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["atik.bd08@gmail.com"])
+            mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
+            
+            present(mail, animated: true)
+        } else {
+            // show failure alert
+        }
     }
-
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
 
 }
 

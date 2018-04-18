@@ -22,7 +22,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
     }
     
     @IBAction func sendMail(_ sender: Any) {
-        sendEmail()
+        composeMail()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -69,6 +69,23 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
             present(mail, animated: true)
         } else {
             // show failure alert
+        }
+    }
+    
+    func composeMail() {
+        if MFMailComposeViewController.canSendMail() {
+            let mailComposeVC = MFMailComposeViewController()
+            
+            mailComposeVC.mailComposeDelegate = self
+            mailComposeVC.setToRecipients(["atik.bd08@gmail.com"])
+            
+            mailComposeVC.addAttachmentData(UIImageJPEGRepresentation(UIImage(named: "emailImage")!, CGFloat(1.0))!, mimeType: "image/jpeg", fileName:  "test.jpeg")
+            
+            mailComposeVC.setSubject("Email Subject")
+            
+            mailComposeVC.setMessageBody("<html><body><p>This is your message</p></body></html>", isHTML: true)
+            
+            self.present(mailComposeVC, animated: true, completion: nil)
         }
     }
     

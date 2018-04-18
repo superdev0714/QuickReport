@@ -26,6 +26,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "NextScreen", sender: nil)
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {

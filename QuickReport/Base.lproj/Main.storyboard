@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CDC-Pa-ucD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,41 +19,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ilq-fG-652">
-                                <rect key="frame" x="16" y="20" width="75" height="75"/>
+                                <rect key="frame" x="16" y="64" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="dlW-nH-WmG"/>
                                     <constraint firstAttribute="height" constant="75" id="x3j-Fw-y3u"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="nYO-Kl-xdW">
-                                <rect key="frame" x="16" y="103" width="343" height="474"/>
+                                <rect key="frame" x="16" y="147" width="343" height="430"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Project Name:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B81-c7-RIo">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="82"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="73"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Builder:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="M2f-bQ-QT6">
-                                        <rect key="frame" x="0.0" y="98" width="343" height="82"/>
+                                        <rect key="frame" x="0.0" y="89" width="343" height="73.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Applicator:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bce-D5-9xo">
-                                        <rect key="frame" x="0.0" y="196" width="343" height="82"/>
+                                        <rect key="frame" x="0.0" y="178.5" width="343" height="73"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Painter:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5cQ-aV-Iap">
-                                        <rect key="frame" x="0.0" y="294" width="343" height="82"/>
+                                        <rect key="frame" x="0.0" y="267.5" width="343" height="73.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Substrate:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="48s-3r-PKm">
-                                        <rect key="frame" x="0.0" y="392" width="343" height="82"/>
+                                        <rect key="frame" x="0.0" y="357" width="343" height="73"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -85,15 +85,50 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ljN-xd-aAK"/>
                     <connections>
                         <outlet property="applicatorTextView" destination="bce-D5-9xo" id="bZw-3b-aNc"/>
                         <outlet property="builderTextView" destination="M2f-bQ-QT6" id="hki-3y-vcc"/>
                         <outlet property="painterTextView" destination="5cQ-aV-Iap" id="We9-fI-LQo"/>
                         <outlet property="projectNameTextView" destination="B81-c7-RIo" id="Mwv-bw-tte"/>
                         <outlet property="substrateTextView" destination="48s-3r-PKm" id="Ivg-Wk-KSq"/>
+                        <segue destination="bEe-ST-0ms" kind="show" identifier="NextScreen" id="Sf8-sg-DiK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="102.99850074962519"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gg7-0Q-mcL">
+            <objects>
+                <viewController id="bEe-ST-0ms" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wK3-iv-KJb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="VxI-8U-GjN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ZK-w3-fT1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1780" y="102.99850074962519"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Qd0-G8-8KK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CDC-Pa-ucD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FG6-P2-FSn">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Hwj-rU-Ddq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Np9-uc-MEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="102.99850074962519"/>
         </scene>

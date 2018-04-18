@@ -24,6 +24,9 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         super.viewDidLoad()
     }
     
+    @IBAction func nextButtonPressed(_ sender: Any) {
+    }
+    
     @objc func keyboardWillShow(notification: NSNotification) {
         if projectNameTextView.isFirstResponder ||
             builderTextView.isFirstResponder {

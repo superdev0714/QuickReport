@@ -26,45 +26,58 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="nYO-Kl-xdW">
-                                <rect key="frame" x="16" y="103" width="343" height="514"/>
+                                <rect key="frame" x="16" y="103" width="343" height="474"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Project Name:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B81-c7-RIo">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="90"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="82"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Builder:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="M2f-bQ-QT6">
-                                        <rect key="frame" x="0.0" y="106" width="343" height="90"/>
+                                        <rect key="frame" x="0.0" y="98" width="343" height="82"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Applicator:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bce-D5-9xo">
-                                        <rect key="frame" x="0.0" y="212" width="343" height="90"/>
+                                        <rect key="frame" x="0.0" y="196" width="343" height="82"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Painter:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5cQ-aV-Iap">
-                                        <rect key="frame" x="0.0" y="318" width="343" height="90"/>
+                                        <rect key="frame" x="0.0" y="294" width="343" height="82"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Substrate:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="48s-3r-PKm">
-                                        <rect key="frame" x="0.0" y="424" width="343" height="90"/>
+                                        <rect key="frame" x="0.0" y="392" width="343" height="82"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Igu-EP-Qcm">
+                                <rect key="frame" x="162.5" y="597" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="hty-go-Gfi"/>
+                                    <constraint firstAttribute="height" constant="50" id="whd-re-IXU"/>
+                                </constraints>
+                                <state key="normal" image="arrow-flat"/>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ea6-cM-8a9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.10323671251535416" green="0.1437869668006897" blue="0.32663881778717041" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Igu-EP-Qcm" secondAttribute="bottom" constant="20" symbolic="YES" id="6u2-nS-y4X"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nYO-Kl-xdW" secondAttribute="trailing" constant="16" id="Ap9-jZ-KoD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nYO-Kl-xdW" secondAttribute="bottom" constant="50" id="B0N-HV-2cb"/>
+                            <constraint firstItem="Igu-EP-Qcm" firstAttribute="top" secondItem="nYO-Kl-xdW" secondAttribute="bottom" constant="20" id="FYl-oc-7vx"/>
+                            <constraint firstItem="Igu-EP-Qcm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mw0-xw-SdW"/>
                             <constraint firstItem="ilq-fG-652" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="O9A-DN-oCh"/>
                             <constraint firstItem="nYO-Kl-xdW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="WFv-I5-d37"/>
                             <constraint firstItem="nYO-Kl-xdW" firstAttribute="top" secondItem="ilq-fG-652" secondAttribute="bottom" constant="8" symbolic="YES" id="XFW-ri-iUz"/>
@@ -86,6 +99,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow-flat" width="256" height="256"/>
         <image name="logo" width="938" height="616"/>
     </resources>
 </document>

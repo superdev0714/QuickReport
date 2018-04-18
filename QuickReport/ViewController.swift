@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import MessageUI
 
-class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
+class ViewController: UIViewController {
     
     @IBOutlet weak var projectNameTextView: UITextView!
     @IBOutlet weak var builderTextView: UITextView!
@@ -63,10 +62,6 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         }
     }
     
-    @IBAction func sendMail(_ sender: Any) {
-        composeMail()
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -115,42 +110,5 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         
         present(alert, animated: true)
     }
-
-    func sendEmail() {
-        if MFMailComposeViewController.canSendMail() {
-            let mail = MFMailComposeViewController()
-            mail.mailComposeDelegate = self
-            mail.setToRecipients(["atik.bd08@gmail.com"])
-            mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
-            
-            present(mail, animated: true)
-        } else {
-            // show failure alert
-        }
-    }
-    
-    func composeMail() {
-        if MFMailComposeViewController.canSendMail() {
-            let mailComposeVC = MFMailComposeViewController()
-            
-            mailComposeVC.mailComposeDelegate = self
-            mailComposeVC.setToRecipients(["atik.bd08@gmail.com"])
-            
-            mailComposeVC.addAttachmentData(UIImageJPEGRepresentation(UIImage(named: "emailImage")!, CGFloat(1.0))!, mimeType: "image/jpeg", fileName:  "test.jpeg")
-            
-            mailComposeVC.setSubject("Email Subject")
-            
-            mailComposeVC.setMessageBody("<html><body><p>This is your message</p></body></html>", isHTML: true)
-            
-            self.present(mailComposeVC, animated: true, completion: nil)
-        }
-    }
-    
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        print(result.rawValue)
-        print(error)
-        controller.dismiss(animated: true)
-    }
-
 }
 

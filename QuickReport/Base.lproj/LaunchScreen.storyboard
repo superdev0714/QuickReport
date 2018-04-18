@@ -28,8 +28,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.10323671251535416" green="0.1437869668006897" blue="0.32663881778717041" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="1Vr-Px-FeP" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="1ur-9T-bTv"/>
-                            <constraint firstItem="1Vr-Px-FeP" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="psh-J2-e4q"/>
+                            <constraint firstItem="1Vr-Px-FeP" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="9aD-Uz-n8r"/>
+                            <constraint firstItem="1Vr-Px-FeP" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="c5v-ca-a0a"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

@@ -123,6 +123,9 @@
                                     <constraint firstAttribute="height" constant="120" id="cfi-Am-U8S"/>
                                 </constraints>
                                 <state key="normal" image="add-camera"/>
+                                <connections>
+                                    <action selector="cameraButtonPressed:" destination="bEe-ST-0ms" eventType="touchUpInside" id="bzA-dS-lGe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yye-fz-bda">
                                 <rect key="frame" x="150" y="572" width="75" height="75"/>
@@ -131,6 +134,9 @@
                                     <constraint firstAttribute="height" constant="75" id="czM-tO-UPd"/>
                                 </constraints>
                                 <state key="normal" image="upload-icon"/>
+                                <connections>
+                                    <action selector="uploadButtonPressed:" destination="bEe-ST-0ms" eventType="touchUpInside" id="ESH-EK-n42"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.10323671251535416" green="0.1437869668006897" blue="0.32663881778717041" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -150,6 +156,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VxI-8U-GjN"/>
                     </view>
+                    <connections>
+                        <outlet property="imageDescriptionTextView" destination="uGt-6a-urC" id="Ge4-ts-y5a"/>
+                        <outlet property="previewImageView" destination="Ah5-0w-j5h" id="8Ee-3w-ATP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ZK-w3-fT1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -29,6 +29,17 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         performSegue(withIdentifier: "NextScreen", sender: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "NextScreen" {
+            let destinationVC = segue.destination as! ImageAttachVC
+            destinationVC.projectName = projectNameTextView.text
+            destinationVC.builder = builderTextView.text
+            destinationVC.applicator = applicatorTextView.text
+            destinationVC.painter = painterTextView.text
+            destinationVC.substrate = substrateTextView.text
+        }
+    }
+    
     @objc func keyboardWillShow(notification: NSNotification) {
         if !isUserEnteredName {
             return

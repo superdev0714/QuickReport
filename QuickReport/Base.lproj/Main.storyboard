@@ -99,10 +99,10 @@
             </objects>
             <point key="canvasLocation" x="1056.8" y="102.99850074962519"/>
         </scene>
-        <!--View Controller-->
+        <!--Image AttachVC-->
         <scene sceneID="gg7-0Q-mcL">
             <objects>
-                <viewController id="bEe-ST-0ms" sceneMemberID="viewController">
+                <viewController id="bEe-ST-0ms" customClass="ImageAttachVC" customModule="QuickReport" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wK3-iv-KJb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

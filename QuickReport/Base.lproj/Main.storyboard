@@ -72,6 +72,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="applicatorTextView" destination="bce-D5-9xo" id="bZw-3b-aNc"/>
+                        <outlet property="builderTextView" destination="M2f-bQ-QT6" id="hki-3y-vcc"/>
+                        <outlet property="painterTextView" destination="5cQ-aV-Iap" id="We9-fI-LQo"/>
+                        <outlet property="projectNameTextView" destination="B81-c7-RIo" id="Mwv-bw-tte"/>
+                        <outlet property="substrateTextView" destination="48s-3r-PKm" id="Ivg-Wk-KSq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

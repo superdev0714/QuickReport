@@ -11,14 +11,36 @@ import MessageUI
 
 class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
-    @IBOutlet weak var projectName: UITextView!
-    @IBOutlet weak var builder: UITextView!
+    @IBOutlet weak var projectNameTextView: UITextView!
+    @IBOutlet weak var builderTextView: UITextView!
+    @IBOutlet weak var applicatorTextView: UITextView!
+    @IBOutlet weak var painterTextView: UITextView!
+    @IBOutlet weak var substrateTextView: UITextView!
     
     let keyName = "uname"
     let defaults = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0{
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y != 0{
+                self.view.frame.origin.y += keyboardSize.height
+            }
+        }
     }
     
     @IBAction func sendMail(_ sender: Any) {

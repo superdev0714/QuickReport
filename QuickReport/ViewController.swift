@@ -19,6 +19,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
     let keyName = "uname"
     let defaults = UserDefaults.standard
+    var isUserEnteredName = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,10 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
+        if !isUserEnteredName {
+            return
+        }
+        
         if projectNameTextView.isFirstResponder ||
             builderTextView.isFirstResponder {
             return
@@ -93,6 +98,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
             }
             
             self.defaults.set(name, forKey: self.keyName)
+            self.isUserEnteredName = true
         }))
         
         present(alert, animated: true)

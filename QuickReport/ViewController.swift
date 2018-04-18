@@ -90,6 +90,8 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        print(result.rawValue)
+        print(error)
         controller.dismiss(animated: true)
     }
 

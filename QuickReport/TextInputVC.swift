@@ -10,6 +10,8 @@ import UIKit
 
 class TextInputVC: UIViewController {
     
+    // MARK: - Properties
+    
     @IBOutlet weak var projectNameTextView: UITextView!
     @IBOutlet weak var builderTextView: UITextView!
     @IBOutlet weak var applicatorTextView: UITextView!
@@ -20,12 +22,36 @@ class TextInputVC: UIViewController {
     let defaults = UserDefaults.standard
     var isUserEnteredName = false
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    // MARK: - Actions
     
     @IBAction func nextButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "NextScreen", sender: nil)
+    }
+    
+    // MARK: -
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        subscribeKeyboardNotifications()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        unsubscribeKeyboardNotifications()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if let uname = defaults.string(forKey: keyName) {
+            print("hello \(uname)")
+            isUserEnteredName = true
+        } else {
+            print("show alert to set user name.")
+            getUserNameAlert()
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -39,11 +65,62 @@ class TextInputVC: UIViewController {
         }
     }
     
+    // MARK: - Username input
+    
+    private func getUserNameAlert() {
+        let alert = UIAlertController(title: "Enter your name", message: nil, preferredStyle: .alert)
+        alert.addTextField {
+            textField in
+            textField.placeholder = "Your Name"
+        }
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {[weak alert] (_)in
+            guard let textField = alert?.textFields?.first else {
+                return
+            }
+            
+            guard let name = textField.text, !name.isEmpty else {
+                // keep showing alert until username is provided
+                self.getUserNameAlert()
+                return
+            }
+            
+            self.defaults.set(name, forKey: self.keyName)
+            self.isUserEnteredName = true
+        }))
+        
+        present(alert, animated: true)
+    }
+    
+    // MARK: - Subscribe/unsubscribe keyboard notifications
+    
+    private func subscribeKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self,
+            selector: #selector(keyboardWillShow(notification:)),
+            name: .UIKeyboardWillShow, object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+            selector: #selector(keyboardWillHide(notification:)),
+            name: .UIKeyboardWillHide, object: nil)
+    }
+    
+    private func unsubscribeKeyboardNotifications() {
+        NotificationCenter.default.removeObserver(self,
+            name: .UIKeyboardWillShow, object: nil)
+        
+        NotificationCenter.default.removeObserver(self,
+            name: .UIKeyboardWillHide, object: nil)
+    }
+    
+    // MARK: - Handle keyboard notifications
+    
     @objc func keyboardWillShow(notification: NSNotification) {
+        // don't move the view before username is provided
         if !isUserEnteredName {
             return
         }
         
+        // don't move the view for first two textViews
         if projectNameTextView.isFirstResponder ||
             builderTextView.isFirstResponder {
             return
@@ -60,56 +137,6 @@ class TextInputVC: UIViewController {
         if self.view.frame.origin.y != 0 {
             self.view.frame.origin.y = 0
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        if let uname = defaults.string(forKey: keyName) {
-            print("hello \(uname)")
-            isUserEnteredName = true
-        } else {
-            print("show alert to set user name.")
-            getUserNameAlert()
-        }
-    }
-    
-    func getUserNameAlert() {
-        let alert = UIAlertController(title: "Enter your name", message: nil, preferredStyle: .alert)
-        alert.addTextField {
-            textField in
-            textField.placeholder = "Your Name"
-        }
-        
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {[weak alert] (_)in
-            guard let textField = alert?.textFields?.first else {
-                return
-            }
-            
-            guard let name = textField.text, !name.isEmpty else {
-                self.getUserNameAlert()
-                return
-            }
-            
-            self.defaults.set(name, forKey: self.keyName)
-            self.isUserEnteredName = true
-        }))
-        
-        present(alert, animated: true)
     }
 }
 

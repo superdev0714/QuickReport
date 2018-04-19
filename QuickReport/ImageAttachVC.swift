@@ -53,15 +53,18 @@ class ImageAttachVC: UIViewController, MFMailComposeViewControllerDelegate, UIIm
             <p>\(imageDescription)</p>
         """
         
-        sendEmail(messageText: messageText)
+        sendEmail(messageText: messageText, image: previewImageView.image)
     }
     
-    func sendEmail(messageText: String) {
+    func sendEmail(messageText: String, image: UIImage?) {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
             mail.setToRecipients(["atik.bd08@gmail.com"])
-//            mail.addAttachmentData(UIImageJPEGRepresentation(UIImage(named: "emailImage")!, CGFloat(1.0))!, mimeType: "image/jpeg", fileName:  "test.jpeg")
+            
+            if let image = image {
+                mail.addAttachmentData(UIImageJPEGRepresentation(image, CGFloat(1.0))!, mimeType: "image/jpeg", fileName: "image1.jpeg")
+            }
             
             mail.setMessageBody(messageText, isHTML: true)
             

@@ -32,6 +32,9 @@ class ImageAttachVC: UIViewController {
     }
     
     @IBAction func uploadButtonPressed(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        let username = defaults.string(forKey: "uname") ?? "unknown"
+        
         guard let projectName = projectName,
             let builder = builder,
             let applictor = applicator,
@@ -47,6 +50,7 @@ class ImageAttachVC: UIViewController {
             <p>\(painter)</p>
             <p>\(substrate)</p>
             <p>\(imageDescription)</p>
+            <p>Report By: \(username)</p>
         """
         
         sendEmail(messageText: messageText, image: previewImageView.image)

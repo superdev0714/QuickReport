@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TextInputVC.swift
 //  QuickReport
 //
 //  Created by Atikur Rahman on 18/4/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TextInputVC: UIViewController {
     
     @IBOutlet weak var projectNameTextView: UITextView!
     @IBOutlet weak var builderTextView: UITextView!

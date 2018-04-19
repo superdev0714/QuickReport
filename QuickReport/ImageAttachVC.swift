@@ -9,7 +9,9 @@
 import UIKit
 import MessageUI
 
-class ImageAttachVC: UIViewController, MFMailComposeViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ImageAttachVC: UIViewController {
+    
+    // MARK: - Properties
     
     @IBOutlet weak var previewImageView: UIImageView!
     @IBOutlet weak var imageDescriptionTextView: UITextView!
@@ -20,19 +22,13 @@ class ImageAttachVC: UIViewController, MFMailComposeViewControllerDelegate, UIIm
     var painter: String?
     var substrate: String?
     
+    // MARK: - Actions
+    
     @IBAction func cameraButtonPressed(_ sender: Any) {
         let picker = UIImagePickerController()
         picker.allowsEditing = true
         picker.delegate = self
         present(picker, animated: true)
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        guard let image = info[UIImagePickerControllerEditedImage] as? UIImage else { return }
-        
-        previewImageView.image = image
-        
-        dismiss(animated: true)
     }
     
     @IBAction func uploadButtonPressed(_ sender: Any) {
@@ -56,7 +52,9 @@ class ImageAttachVC: UIViewController, MFMailComposeViewControllerDelegate, UIIm
         sendEmail(messageText: messageText, image: previewImageView.image)
     }
     
-    func sendEmail(messageText: String, image: UIImage?) {
+    // MARK: - Send email
+    
+    private func sendEmail(messageText: String, image: UIImage?) {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
@@ -71,8 +69,12 @@ class ImageAttachVC: UIViewController, MFMailComposeViewControllerDelegate, UIIm
             present(mail, animated: true)
         } else {
             // show failure alert
+            print("Email send failed.")
         }
     }
+}
+
+extension ImageAttachVC: MFMailComposeViewControllerDelegate {
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         if result == .sent {
@@ -81,5 +83,15 @@ class ImageAttachVC: UIViewController, MFMailComposeViewControllerDelegate, UIIm
         
         controller.dismiss(animated: true)
     }
+}
 
+extension ImageAttachVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        guard let image = info[UIImagePickerControllerEditedImage] as? UIImage else { return }
+        
+        previewImageView.image = image
+        
+        dismiss(animated: true)
+    }
 }

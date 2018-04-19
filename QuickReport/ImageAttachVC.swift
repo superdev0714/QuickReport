@@ -10,6 +10,7 @@ import UIKit
 import MessageUI
 
 class ImageAttachVC: UIViewController, MFMailComposeViewControllerDelegate {
+    
     @IBOutlet weak var previewImageView: UIImageView!
     @IBOutlet weak var imageDescriptionTextView: UITextView!
     
@@ -59,8 +60,10 @@ class ImageAttachVC: UIViewController, MFMailComposeViewControllerDelegate {
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        print(result.rawValue)
-        print(error)
+        if result == .sent {
+            previewImageView.image = UIImage(named: "confirmation")
+        }
+        
         controller.dismiss(animated: true)
     }
 

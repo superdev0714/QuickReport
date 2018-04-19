@@ -9,7 +9,7 @@
 import UIKit
 import MessageUI
 
-class ImageAttachVC: UIViewController, MFMailComposeViewControllerDelegate {
+class ImageAttachVC: UIViewController, MFMailComposeViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var previewImageView: UIImageView!
     @IBOutlet weak var imageDescriptionTextView: UITextView!
@@ -21,8 +21,20 @@ class ImageAttachVC: UIViewController, MFMailComposeViewControllerDelegate {
     var substrate: String?
     
     @IBAction func cameraButtonPressed(_ sender: Any) {
-        
+        let picker = UIImagePickerController()
+        picker.allowsEditing = true
+        picker.delegate = self
+        present(picker, animated: true)
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        guard let image = info[UIImagePickerControllerEditedImage] as? UIImage else { return }
+        
+        previewImageView.image = image
+        
+        dismiss(animated: true)
+    }
+    
     @IBAction func uploadButtonPressed(_ sender: Any) {
         guard let projectName = projectName,
             let builder = builder,

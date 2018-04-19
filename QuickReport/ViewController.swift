@@ -81,6 +81,7 @@ class ViewController: UIViewController {
         
         if let uname = defaults.string(forKey: keyName) {
             print("hello \(uname)")
+            isUserEnteredName = true
         } else {
             print("show alert to set user name.")
             getUserNameAlert()

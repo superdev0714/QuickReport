@@ -78,7 +78,7 @@ extension ImageAttachVC: MFMailComposeViewControllerDelegate {
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         if result == .sent {
-            previewImageView.image = UIImage(named: "confirmation")
+            performSegue(withIdentifier: "EmailSent", sender: nil)
         }
         
         controller.dismiss(animated: true)

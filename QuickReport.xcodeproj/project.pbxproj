@@ -39,6 +39,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24F1800F20899DED00812223 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				24F915A62087403400D31CCF /* TextInputVC.swift */,
+				24669F5A2087C65A00BE3B41 /* ImageAttachVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		24F1801020899DF800812223 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				24F915A82087403400D31CCF /* Main.storyboard */,
+				24F915AD2087403500D31CCF /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		24F1801120899E0400812223 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				24403BA220887655000E1F8A /* Gotham-Bold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		24F915982087403400D31CCF = {
 			isa = PBXGroup;
 			children = (
@@ -59,13 +85,11 @@
 			isa = PBXGroup;
 			children = (
 				24F915A42087403400D31CCF /* AppDelegate.swift */,
-				24F915A62087403400D31CCF /* TextInputVC.swift */,
-				24669F5A2087C65A00BE3B41 /* ImageAttachVC.swift */,
-				24F915A82087403400D31CCF /* Main.storyboard */,
+				24F1800F20899DED00812223 /* ViewControllers */,
+				24F1801020899DF800812223 /* Storyboards */,
 				24F915AB2087403500D31CCF /* Assets.xcassets */,
-				24F915AD2087403500D31CCF /* LaunchScreen.storyboard */,
 				24F915B02087403500D31CCF /* Info.plist */,
-				24403BA220887655000E1F8A /* Gotham-Bold.otf */,
+				24F1801120899E0400812223 /* Fonts */,
 			);
 			path = QuickReport;
 			sourceTree = "<group>";

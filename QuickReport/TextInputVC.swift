@@ -30,6 +30,16 @@ class TextInputVC: UIViewController {
     
     // MARK: -
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        projectNameTextView.delegate = self
+        builderTextView.delegate = self
+        applicatorTextView.delegate = self
+        painterTextView.delegate = self
+        substrateTextView.delegate = self
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -137,6 +147,17 @@ class TextInputVC: UIViewController {
         if self.view.frame.origin.y != 0 {
             self.view.frame.origin.y = 0
         }
+    }
+}
+
+extension TextInputVC: UITextViewDelegate {
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
     }
 }
 

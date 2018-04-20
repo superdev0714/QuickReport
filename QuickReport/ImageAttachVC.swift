@@ -68,6 +68,7 @@ class ImageAttachVC: UIViewController {
                 mail.addAttachmentData(UIImageJPEGRepresentation(image, CGFloat(1.0))!, mimeType: "image/jpeg", fileName: "image1.jpeg")
             }
             
+            mail.setSubject("Report")
             mail.setMessageBody(messageText, isHTML: true)
             
             present(mail, animated: true)

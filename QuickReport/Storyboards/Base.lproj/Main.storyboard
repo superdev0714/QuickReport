@@ -24,59 +24,53 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ilq-fG-652">
-                                <rect key="frame" x="16" y="64" width="65" height="45"/>
+                                <rect key="frame" x="16" y="64" width="75" height="75"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="65" id="dlW-nH-WmG"/>
-                                    <constraint firstAttribute="height" constant="45" id="x3j-Fw-y3u"/>
+                                    <constraint firstAttribute="width" constant="75" id="dlW-nH-WmG"/>
+                                    <constraint firstAttribute="height" constant="75" id="x3j-Fw-y3u"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nYO-Kl-xdW">
-                                <rect key="frame" x="16" y="117" width="343" height="464"/>
+                                <rect key="frame" x="16" y="147" width="343" height="434"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Project Name: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B81-c7-RIo">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="51"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="55"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Builder: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="M2f-bQ-QT6">
-                                        <rect key="frame" x="0.0" y="59" width="343" height="51"/>
+                                        <rect key="frame" x="0.0" y="63" width="343" height="55.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Applicator: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bce-D5-9xo">
-                                        <rect key="frame" x="0.0" y="118" width="343" height="51"/>
+                                        <rect key="frame" x="0.0" y="126.5" width="343" height="55"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Painter: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5cQ-aV-Iap">
-                                        <rect key="frame" x="0.0" y="177" width="343" height="51"/>
+                                        <rect key="frame" x="0.0" y="189.5" width="343" height="55"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Substrate: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="48s-3r-PKm">
-                                        <rect key="frame" x="0.0" y="236" width="343" height="51"/>
+                                        <rect key="frame" x="0.0" y="252.5" width="343" height="55"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="System: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ME8-c1-E8B">
-                                        <rect key="frame" x="0.0" y="295" width="343" height="51"/>
+                                        <rect key="frame" x="0.0" y="315.5" width="343" height="55.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Job size (sqm): " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nEA-Rm-FLd">
-                                        <rect key="frame" x="0.0" y="354" width="343" height="51"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
-                                    </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Extra information (challenges, solutions, anything unique?): " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zzV-aL-a3i">
-                                        <rect key="frame" x="0.0" y="413" width="343" height="51"/>
+                                        <rect key="frame" x="0.0" y="379" width="343" height="55"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
@@ -112,18 +106,109 @@
                     <connections>
                         <outlet property="applicatorTextView" destination="bce-D5-9xo" id="bZw-3b-aNc"/>
                         <outlet property="builderTextView" destination="M2f-bQ-QT6" id="hki-3y-vcc"/>
-                        <outlet property="extraInfoTextView" destination="zzV-aL-a3i" id="lGA-cb-Gwc"/>
                         <outlet property="jobSizeTextView" destination="nEA-Rm-FLd" id="gd4-C7-hjW"/>
                         <outlet property="painterTextView" destination="5cQ-aV-Iap" id="We9-fI-LQo"/>
                         <outlet property="projectNameTextView" destination="B81-c7-RIo" id="Mwv-bw-tte"/>
                         <outlet property="substrateTextView" destination="48s-3r-PKm" id="Ivg-Wk-KSq"/>
                         <outlet property="systemTextView" destination="ME8-c1-E8B" id="RDR-dm-h2Z"/>
-                        <segue destination="bEe-ST-0ms" kind="show" identifier="NextScreen" id="Sf8-sg-DiK"/>
+                        <segue destination="1aR-SY-Dzq" kind="show" identifier="NextScreen" id="tp2-Jw-quT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1056.8" y="102.99850074962519"/>
+            <point key="canvasLocation" x="802" y="103"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="HDK-Dc-9fH">
+            <objects>
+                <viewController id="1aR-SY-Dzq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1dd-f5-UxB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="7ND-2N-Jju">
+                                <rect key="frame" x="16" y="64" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="7ZH-Ty-0e5"/>
+                                    <constraint firstAttribute="width" constant="75" id="f46-HE-oTp"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fhf-xS-1ZK">
+                                <rect key="frame" x="162" y="597" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="EDd-pz-qh2"/>
+                                    <constraint firstAttribute="height" constant="50" id="edO-jg-fgH"/>
+                                </constraints>
+                                <state key="normal" image="arrow-flat"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="U3B-9W-Soy">
+                                <rect key="frame" x="16" y="147" width="343" height="434"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Date completed: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NCQ-9B-uAB">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="55"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem ipsum: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="A37-TC-cPU">
+                                        <rect key="frame" x="0.0" y="63" width="343" height="55.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem ipsum: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3Qs-bl-l09">
+                                        <rect key="frame" x="0.0" y="126.5" width="343" height="55"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem ipsum: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="c5u-M2-Nnh">
+                                        <rect key="frame" x="0.0" y="189.5" width="343" height="55"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem ipsum: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wh4-wT-Krf">
+                                        <rect key="frame" x="0.0" y="252.5" width="343" height="55"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem ipsum: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HNx-5f-YOF">
+                                        <rect key="frame" x="0.0" y="315.5" width="343" height="55.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Extra information (challenges, solutions, anything unique?): " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sbK-p4-jh9">
+                                        <rect key="frame" x="0.0" y="379" width="343" height="55"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.10385585576295853" green="0.14775806665420532" blue="0.32467639446258545" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Fhf-xS-1ZK" firstAttribute="top" secondItem="U3B-9W-Soy" secondAttribute="bottom" constant="16" id="7Kx-GQ-Vcr"/>
+                            <constraint firstItem="AfX-qR-suz" firstAttribute="trailing" secondItem="U3B-9W-Soy" secondAttribute="trailing" constant="16" id="GMk-ON-d4b"/>
+                            <constraint firstItem="U3B-9W-Soy" firstAttribute="leading" secondItem="AfX-qR-suz" secondAttribute="leading" constant="16" id="Jwl-2k-5Ze"/>
+                            <constraint firstItem="Fhf-xS-1ZK" firstAttribute="centerX" secondItem="1dd-f5-UxB" secondAttribute="centerX" id="Pj6-QD-F3v"/>
+                            <constraint firstItem="7ND-2N-Jju" firstAttribute="leading" secondItem="AfX-qR-suz" secondAttribute="leading" constant="16" id="Rij-Xw-I0k"/>
+                            <constraint firstItem="U3B-9W-Soy" firstAttribute="top" secondItem="7ND-2N-Jju" secondAttribute="bottom" constant="8" symbolic="YES" id="dtN-Yj-Vd3"/>
+                            <constraint firstAttribute="bottom" secondItem="Fhf-xS-1ZK" secondAttribute="bottom" constant="20" symbolic="YES" id="gvM-6u-lW4"/>
+                            <constraint firstItem="7ND-2N-Jju" firstAttribute="top" secondItem="AfX-qR-suz" secondAttribute="top" id="lIk-Zg-QIM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AfX-qR-suz"/>
+                    </view>
+                    <connections>
+                        <segue destination="bEe-ST-0ms" kind="show" identifier="ImageUploadScreen" id="OTQ-S5-JN9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WE9-WH-E0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1528.8" y="102.99850074962519"/>
         </scene>
         <!--Image AttachVC-->
         <scene sceneID="gg7-0Q-mcL">
@@ -195,7 +280,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ZK-w3-fT1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1780" y="102.99850074962519"/>
+            <point key="canvasLocation" x="2202" y="103"/>
         </scene>
         <!--ConfirmationVC-->
         <scene sceneID="mwz-X9-eDU">
@@ -223,7 +308,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y2v-5y-XVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2522" y="103"/>
+            <point key="canvasLocation" x="2906" y="103"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qd0-G8-8KK">

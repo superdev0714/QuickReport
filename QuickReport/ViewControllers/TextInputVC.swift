@@ -19,7 +19,6 @@ class TextInputVC: UIViewController {
     @IBOutlet weak var substrateTextView: UITextView!
     @IBOutlet weak var systemTextView: UITextView!
     @IBOutlet weak var jobSizeTextView: UITextView!
-    @IBOutlet weak var extraInfoTextView: UITextView!
     
     let keyName = "uname"
     let defaults = UserDefaults.standard
@@ -43,7 +42,6 @@ class TextInputVC: UIViewController {
         substrateTextView.delegate = self
         systemTextView.delegate = self
         jobSizeTextView.delegate = self
-        extraInfoTextView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,15 +70,15 @@ class TextInputVC: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "NextScreen" {
-            let destinationVC = segue.destination as! ImageAttachVC
-            destinationVC.projectName = projectNameTextView.text
-            destinationVC.builder = builderTextView.text
-            destinationVC.applicator = applicatorTextView.text
-            destinationVC.painter = painterTextView.text
-            destinationVC.substrate = substrateTextView.text
-            destinationVC.system = systemTextView.text
-            destinationVC.jobSize = jobSizeTextView.text
-            destinationVC.extraInfo = extraInfoTextView.text
+//            let destinationVC = segue.destination as! ImageAttachVC
+//            destinationVC.projectName = projectNameTextView.text
+//            destinationVC.builder = builderTextView.text
+//            destinationVC.applicator = applicatorTextView.text
+//            destinationVC.painter = painterTextView.text
+//            destinationVC.substrate = substrateTextView.text
+//            destinationVC.system = systemTextView.text
+//            destinationVC.jobSize = jobSizeTextView.text
+//            destinationVC.extraInfo = extraInfoTextView.text
         }
     }
     
@@ -139,11 +137,10 @@ class TextInputVC: UIViewController {
             return
         }
         
-        // don't move the view for first four textViews
+        // don't move the view for first three textViews
         if projectNameTextView.isFirstResponder ||
             builderTextView.isFirstResponder ||
-            applicatorTextView.isFirstResponder ||
-            painterTextView.isFirstResponder {
+            applicatorTextView.isFirstResponder {
             return
         }
         

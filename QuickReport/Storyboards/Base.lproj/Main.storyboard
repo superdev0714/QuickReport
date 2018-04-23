@@ -39,37 +39,37 @@
                                         <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Builder: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="M2f-bQ-QT6">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Project address: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="M2f-bQ-QT6">
                                         <rect key="frame" x="0.0" y="63" width="343" height="55.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Applicator: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bce-D5-9xo">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Project background: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bce-D5-9xo">
                                         <rect key="frame" x="0.0" y="126.5" width="343" height="55"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Painter: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5cQ-aV-Iap">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Customer name: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5cQ-aV-Iap">
                                         <rect key="frame" x="0.0" y="189.5" width="343" height="55"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Substrate: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="48s-3r-PKm">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Customer phone: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="48s-3r-PKm">
                                         <rect key="frame" x="0.0" y="252.5" width="343" height="55"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="System: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ME8-c1-E8B">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Customer email: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ME8-c1-E8B">
                                         <rect key="frame" x="0.0" y="315.5" width="343" height="55.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Job size (sqm): " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nEA-Rm-FLd">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Project completion date: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nEA-Rm-FLd">
                                         <rect key="frame" x="0.0" y="379" width="343" height="55"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
@@ -144,37 +144,37 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="U3B-9W-Soy">
                                 <rect key="frame" x="16" y="147" width="343" height="434"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Date completed: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NCQ-9B-uAB">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Builder: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NCQ-9B-uAB">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="55"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem ipsum: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="A37-TC-cPU">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Applicator: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="A37-TC-cPU">
                                         <rect key="frame" x="0.0" y="63" width="343" height="55.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem ipsum: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3Qs-bl-l09">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Painter: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3Qs-bl-l09">
                                         <rect key="frame" x="0.0" y="126.5" width="343" height="55"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem ipsum: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="c5u-M2-Nnh">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Substrate: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="c5u-M2-Nnh">
                                         <rect key="frame" x="0.0" y="189.5" width="343" height="55"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem ipsum: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wh4-wT-Krf">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="System: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wh4-wT-Krf">
                                         <rect key="frame" x="0.0" y="252.5" width="343" height="55"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem ipsum: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HNx-5f-YOF">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Job size (sqm): " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HNx-5f-YOF">
                                         <rect key="frame" x="0.0" y="315.5" width="343" height="55.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>

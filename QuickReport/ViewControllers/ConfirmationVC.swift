@@ -23,13 +23,12 @@ class ConfirmationVC: UIViewController {
             
             if let vc = self.navigationController?.viewControllers.first as? TextInputVC {
                 vc.projectNameTextView.text = "Project Name: "
-                vc.projectBgTextView.text = "Applicator: "
-                vc.projectAddrTextView.text = "Builder: "
-                vc.customerNameTextView.text = "Painter: "
-                vc.customerPhoneTextView.text = "Substrate: "
-                vc.customerEmailTextView.text = "System: "
-                vc.projectCompletionDateTextView.text = "Job size (sqm): "
-                //vc.extraInfoTextView.text = "Extra information (challenges, solutions, anything unique?): "
+                vc.projectAddrTextView.text = "Project address: "
+                vc.projectBgTextView.text = "Project background: "
+                vc.customerNameTextView.text = "Customer name: "
+                vc.customerPhoneTextView.text = "Customer phone: "
+                vc.customerEmailTextView.text = "Customer email: "
+                vc.projectCompletionDateTextView.text = "Project completion date: "
             }
             
             self.navigationController!.popToRootViewController(animated: true)

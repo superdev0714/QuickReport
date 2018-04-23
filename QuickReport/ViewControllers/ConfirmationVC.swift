@@ -29,6 +29,7 @@ class ConfirmationVC: UIViewController {
                 vc.substrateTextView.text = "Substrate: "
                 vc.systemTextView.text = "System: "
                 vc.jobSizeTextView.text = "Job size (sqm): "
+                vc.extraInfoTextView.text = "Extra information (challenges, solutions, anything unique?): "
             }
             
             self.navigationController!.popToRootViewController(animated: true)

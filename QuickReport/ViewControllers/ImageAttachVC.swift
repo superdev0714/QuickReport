@@ -15,7 +15,6 @@ class ImageAttachVC: UIViewController {
     
     @IBOutlet weak var previewImageView: UIImageView!
     @IBOutlet weak var imageDescriptionTextView: UITextView!
-    @IBOutlet weak var extraInfoTextView: UITextView!
     
     var projectName: String?
     var builder: String?
@@ -24,6 +23,7 @@ class ImageAttachVC: UIViewController {
     var substrate: String?
     var system: String?
     var jobSize: String?
+    var extraInfo: String?
     
     var images = [UIImage]()
     var descriptions = [String]()
@@ -65,7 +65,7 @@ class ImageAttachVC: UIViewController {
             let painter = painter,
             let system = system,
             let jobSize = jobSize,
-            let extraInfo = extraInfoTextView.text,
+            let extraInfo = extraInfo,
             let substrate = substrate else {
                 return
         }
@@ -103,7 +103,6 @@ class ImageAttachVC: UIViewController {
         super.viewDidLoad()
         
         imageDescriptionTextView.delegate = self
-        extraInfoTextView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -19,6 +19,7 @@ class TextInputVC: UIViewController {
     @IBOutlet weak var substrateTextView: UITextView!
     @IBOutlet weak var systemTextView: UITextView!
     @IBOutlet weak var jobSizeTextView: UITextView!
+    @IBOutlet weak var extraInfoTextView: UITextView!
     
     let keyName = "uname"
     let defaults = UserDefaults.standard
@@ -42,6 +43,7 @@ class TextInputVC: UIViewController {
         substrateTextView.delegate = self
         systemTextView.delegate = self
         jobSizeTextView.delegate = self
+        extraInfoTextView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -78,6 +80,7 @@ class TextInputVC: UIViewController {
             destinationVC.substrate = substrateTextView.text
             destinationVC.system = systemTextView.text
             destinationVC.jobSize = jobSizeTextView.text
+            destinationVC.extraInfo = extraInfoTextView.text
         }
     }
     
@@ -136,10 +139,11 @@ class TextInputVC: UIViewController {
             return
         }
         
-        // don't move the view for first three textViews
+        // don't move the view for first four textViews
         if projectNameTextView.isFirstResponder ||
             builderTextView.isFirstResponder ||
-            applicatorTextView.isFirstResponder {
+            applicatorTextView.isFirstResponder ||
+            painterTextView.isFirstResponder {
             return
         }
         

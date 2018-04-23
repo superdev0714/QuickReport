@@ -197,10 +197,10 @@
             </objects>
             <point key="canvasLocation" x="1780" y="102.99850074962519"/>
         </scene>
-        <!--View Controller-->
+        <!--ConfirmationVC-->
         <scene sceneID="mwz-X9-eDU">
             <objects>
-                <viewController id="dkA-kk-std" sceneMemberID="viewController">
+                <viewController id="dkA-kk-std" customClass="ConfirmationVC" customModule="QuickReport" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dev-5K-k8e">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

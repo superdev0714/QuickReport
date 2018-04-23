@@ -17,6 +17,13 @@ class ImageAttachVC: UIViewController {
     @IBOutlet weak var imageDescriptionTextView: UITextView!
     
     var projectName: String?
+    var projectAddr: String?
+    var projectBg: String?
+    var customerName: String?
+    var customerPhone: String?
+    var customerEmail: String?
+    var projectCompletionDate: String?
+    
     var builder: String?
     var applicator: String?
     var painter: String?

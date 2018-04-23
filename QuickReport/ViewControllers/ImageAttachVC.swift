@@ -67,24 +67,35 @@ class ImageAttachVC: UIViewController {
         addImageToUploadCollection()
         
         guard let projectName = projectName,
+            let projectAddr = projectAddr,
+            let projectBg = projectBg,
+            let customerName = customerName,
+            let customerPhone = customerPhone,
+            let customerEmail = customerEmail,
+            let projectCompletionDate = projectCompletionDate,
             let builder = builder,
             let applictor = applicator,
             let painter = painter,
+            let substrate = substrate,
             let system = system,
             let jobSize = jobSize,
-            let extraInfo = extraInfo,
-            let substrate = substrate else {
+            let extraInfo = extraInfo else {
                 return
         }
         var messageText = """
             <p>\(projectName)</p>
+            <p>\(projectAddr)</p>
+            <p>\(projectBg)</p>
+            <p>\(customerName)</p>
+            <p>\(customerPhone)</p>
+            <p>\(customerEmail)</p>
+            <p>\(projectCompletionDate)</p>
             <p>\(builder)</p>
             <p>\(applictor)</p>
             <p>\(painter)</p>
             <p>\(substrate)</p>
             <p>\(system)</p>
             <p>\(jobSize)</p>
-            <p>Date completed: \(getTodaysDate())</p>
             <p>\(extraInfo)</p>
         """
         
@@ -95,13 +106,6 @@ class ImageAttachVC: UIViewController {
         messageText += "<p>Report By: \(username)</p>"
         
         sendEmail(messageText: messageText, images: images)
-    }
-    
-    private func getTodaysDate() -> String {
-        let date = Date()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MM.dd.yyyy"
-        return formatter.string(from: date)
     }
     
     // MARK: -

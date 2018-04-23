@@ -13,12 +13,12 @@ class TextInputVC: UIViewController {
     // MARK: - Properties
     
     @IBOutlet weak var projectNameTextView: UITextView!
-    @IBOutlet weak var builderTextView: UITextView!
-    @IBOutlet weak var applicatorTextView: UITextView!
-    @IBOutlet weak var painterTextView: UITextView!
-    @IBOutlet weak var substrateTextView: UITextView!
-    @IBOutlet weak var systemTextView: UITextView!
-    @IBOutlet weak var jobSizeTextView: UITextView!
+    @IBOutlet weak var projectAddrTextView: UITextView!
+    @IBOutlet weak var projectBgTextView: UITextView!
+    @IBOutlet weak var customerNameTextView: UITextView!
+    @IBOutlet weak var customerPhoneTextView: UITextView!
+    @IBOutlet weak var customerEmailTextView: UITextView!
+    @IBOutlet weak var projectCompletionDateTextView: UITextView!
     
     let keyName = "uname"
     let defaults = UserDefaults.standard
@@ -36,12 +36,12 @@ class TextInputVC: UIViewController {
         super.viewDidLoad()
         
         projectNameTextView.delegate = self
-        builderTextView.delegate = self
-        applicatorTextView.delegate = self
-        painterTextView.delegate = self
-        substrateTextView.delegate = self
-        systemTextView.delegate = self
-        jobSizeTextView.delegate = self
+        projectAddrTextView.delegate = self
+        projectBgTextView.delegate = self
+        customerNameTextView.delegate = self
+        customerPhoneTextView.delegate = self
+        customerEmailTextView.delegate = self
+        projectCompletionDateTextView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -139,8 +139,8 @@ class TextInputVC: UIViewController {
         
         // don't move the view for first three textViews
         if projectNameTextView.isFirstResponder ||
-            builderTextView.isFirstResponder ||
-            applicatorTextView.isFirstResponder {
+            projectAddrTextView.isFirstResponder ||
+            projectBgTextView.isFirstResponder {
             return
         }
         

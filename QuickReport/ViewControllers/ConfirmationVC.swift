@@ -23,12 +23,12 @@ class ConfirmationVC: UIViewController {
             
             if let vc = self.navigationController?.viewControllers.first as? TextInputVC {
                 vc.projectNameTextView.text = "Project Name: "
-                vc.applicatorTextView.text = "Applicator: "
-                vc.builderTextView.text = "Builder: "
-                vc.painterTextView.text = "Painter: "
-                vc.substrateTextView.text = "Substrate: "
-                vc.systemTextView.text = "System: "
-                vc.jobSizeTextView.text = "Job size (sqm): "
+                vc.projectBgTextView.text = "Applicator: "
+                vc.projectAddrTextView.text = "Builder: "
+                vc.customerNameTextView.text = "Painter: "
+                vc.customerPhoneTextView.text = "Substrate: "
+                vc.customerEmailTextView.text = "System: "
+                vc.projectCompletionDateTextView.text = "Job size (sqm): "
                 //vc.extraInfoTextView.text = "Extra information (challenges, solutions, anything unique?): "
             }
             

@@ -104,13 +104,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="ljN-xd-aAK"/>
                     <connections>
-                        <outlet property="applicatorTextView" destination="bce-D5-9xo" id="bZw-3b-aNc"/>
-                        <outlet property="builderTextView" destination="M2f-bQ-QT6" id="hki-3y-vcc"/>
-                        <outlet property="jobSizeTextView" destination="nEA-Rm-FLd" id="gd4-C7-hjW"/>
-                        <outlet property="painterTextView" destination="5cQ-aV-Iap" id="We9-fI-LQo"/>
+                        <outlet property="customerEmailTextView" destination="ME8-c1-E8B" id="RDR-dm-h2Z"/>
+                        <outlet property="customerNameTextView" destination="5cQ-aV-Iap" id="We9-fI-LQo"/>
+                        <outlet property="customerPhoneTextView" destination="48s-3r-PKm" id="Ivg-Wk-KSq"/>
+                        <outlet property="projectAddrTextView" destination="M2f-bQ-QT6" id="hki-3y-vcc"/>
+                        <outlet property="projectBgTextView" destination="bce-D5-9xo" id="bZw-3b-aNc"/>
+                        <outlet property="projectCompletionDateTextView" destination="nEA-Rm-FLd" id="gd4-C7-hjW"/>
                         <outlet property="projectNameTextView" destination="B81-c7-RIo" id="Mwv-bw-tte"/>
-                        <outlet property="substrateTextView" destination="48s-3r-PKm" id="Ivg-Wk-KSq"/>
-                        <outlet property="systemTextView" destination="ME8-c1-E8B" id="RDR-dm-h2Z"/>
                         <segue destination="1aR-SY-Dzq" kind="show" identifier="NextScreen" id="tp2-Jw-quT"/>
                     </connections>
                 </viewController>

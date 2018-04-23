@@ -10,6 +10,12 @@ import UIKit
 
 class ConfirmationVC: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.navigationItem.setHidesBackButton(true, animated:true);
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         

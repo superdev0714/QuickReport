@@ -22,38 +22,62 @@ class ImageAttachVC: UIViewController {
     var painter: String?
     var substrate: String?
     
+    var images = [UIImage]()
+    var descriptions = [String]()
+    
+    let defaultDescription = "Description of photo"
+    
     // MARK: - Actions
     
     @IBAction func cameraButtonPressed(_ sender: Any) {
+        addImageToUploadCollection()
+        
         let picker = UIImagePickerController()
         picker.allowsEditing = true
         picker.delegate = self
         present(picker, animated: true)
     }
     
+    private func addImageToUploadCollection() {
+        if let image = previewImageView.image {
+            images.append(image)
+            
+            let description = imageDescriptionTextView.text ?? defaultDescription + " \(descriptions.count): "
+            descriptions.append(description)
+            
+            previewImageView.image = nil
+            imageDescriptionTextView.text = defaultDescription + " \(descriptions.count + 1): "
+        }
+    }
+    
     @IBAction func uploadButtonPressed(_ sender: Any) {
         let defaults = UserDefaults.standard
         let username = defaults.string(forKey: "uname") ?? "unknown"
+        
+        addImageToUploadCollection()
         
         guard let projectName = projectName,
             let builder = builder,
             let applictor = applicator,
             let painter = painter,
-            let substrate = substrate,
-            let imageDescription = imageDescriptionTextView.text else {
+            let substrate = substrate else {
                 return
         }
-        let messageText = """
+        var messageText = """
             <p>\(projectName)</p>
             <p>\(builder)</p>
             <p>\(applictor)</p>
             <p>\(painter)</p>
             <p>\(substrate)</p>
-            <p>\(imageDescription)</p>
-            <p>Report By: \(username)</p>
         """
         
-        sendEmail(messageText: messageText, image: previewImageView.image)
+        for description in descriptions {
+            messageText += "<p>\(description)</p>"
+        }
+        
+        messageText += "<p>Report By: \(username)</p>"
+        
+        sendEmail(messageText: messageText, images: images)
     }
     
     // MARK: -
@@ -78,14 +102,16 @@ class ImageAttachVC: UIViewController {
     
     // MARK: - Send email
     
-    private func sendEmail(messageText: String, image: UIImage?) {
+    private func sendEmail(messageText: String, images: [UIImage]) {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
             mail.setToRecipients(["atik.bd08@gmail.com"])
             
-            if let image = image {
-                mail.addAttachmentData(UIImageJPEGRepresentation(image, CGFloat(1.0))!, mimeType: "image/jpeg", fileName: "image1.jpeg")
+            var image_count = 1
+            for image in images {
+                mail.addAttachmentData(UIImageJPEGRepresentation(image, CGFloat(1.0))!, mimeType: "image/jpeg", fileName: "image\(image_count).jpeg")
+                image_count += 1
             }
             
             mail.setSubject("Report")

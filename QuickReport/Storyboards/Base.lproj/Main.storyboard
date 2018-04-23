@@ -118,10 +118,10 @@
             </objects>
             <point key="canvasLocation" x="802" y="103"/>
         </scene>
-        <!--View Controller-->
+        <!--Second Text InputVC-->
         <scene sceneID="HDK-Dc-9fH">
             <objects>
-                <viewController id="1aR-SY-Dzq" sceneMemberID="viewController">
+                <viewController id="1aR-SY-Dzq" customClass="SecondTextInputVC" customModule="QuickReport" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1dd-f5-UxB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,6 +140,9 @@
                                     <constraint firstAttribute="height" constant="50" id="edO-jg-fgH"/>
                                 </constraints>
                                 <state key="normal" image="arrow-flat"/>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="1aR-SY-Dzq" eventType="touchUpInside" id="vvF-ic-gwb"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="U3B-9W-Soy">
                                 <rect key="frame" x="16" y="147" width="343" height="434"/>
@@ -203,6 +206,13 @@
                         <viewLayoutGuide key="safeArea" id="AfX-qR-suz"/>
                     </view>
                     <connections>
+                        <outlet property="applicatorTextView" destination="A37-TC-cPU" id="CHd-kT-7Dn"/>
+                        <outlet property="builderTextView" destination="NCQ-9B-uAB" id="rVu-9e-2xf"/>
+                        <outlet property="extraInfoTextView" destination="sbK-p4-jh9" id="7bQ-3Q-liN"/>
+                        <outlet property="jobSizeTextView" destination="HNx-5f-YOF" id="xCc-zE-4ug"/>
+                        <outlet property="painterTextView" destination="3Qs-bl-l09" id="5CT-3s-zyx"/>
+                        <outlet property="substrateTextView" destination="c5u-M2-Nnh" id="Ct7-xz-oKP"/>
+                        <outlet property="systemTextView" destination="wh4-wT-Krf" id="Ptc-x4-N2t"/>
                         <segue destination="bEe-ST-0ms" kind="show" identifier="ImageUploadScreen" id="OTQ-S5-JN9"/>
                     </connections>
                 </viewController>

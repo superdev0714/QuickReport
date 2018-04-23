@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24207ED4208E567300CDD0DA /* SecondTextInputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24207ED3208E567300CDD0DA /* SecondTextInputVC.swift */; };
 		24403BA32088765C000E1F8A /* Gotham-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 24403BA220887655000E1F8A /* Gotham-Bold.otf */; };
 		244293C3208D948900C83228 /* ConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244293C2208D948900C83228 /* ConfirmationVC.swift */; };
 		244293C5208D98BE00C83228 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244293C4208D98BE00C83228 /* Config.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24207ED3208E567300CDD0DA /* SecondTextInputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTextInputVC.swift; sourceTree = "<group>"; };
 		24403BA220887655000E1F8A /* Gotham-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Bold.otf"; sourceTree = "<group>"; };
 		244293C2208D948900C83228 /* ConfirmationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationVC.swift; sourceTree = "<group>"; };
 		244293C4208D98BE00C83228 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -47,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				24F915A62087403400D31CCF /* TextInputVC.swift */,
+				24207ED3208E567300CDD0DA /* SecondTextInputVC.swift */,
 				24669F5A2087C65A00BE3B41 /* ImageAttachVC.swift */,
 				244293C2208D948900C83228 /* ConfirmationVC.swift */,
 			);
@@ -176,6 +179,7 @@
 				244293C3208D948900C83228 /* ConfirmationVC.swift in Sources */,
 				244293C5208D98BE00C83228 /* Config.swift in Sources */,
 				24F915A72087403400D31CCF /* TextInputVC.swift in Sources */,
+				24207ED4208E567300CDD0DA /* SecondTextInputVC.swift in Sources */,
 				24F915A52087403400D31CCF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

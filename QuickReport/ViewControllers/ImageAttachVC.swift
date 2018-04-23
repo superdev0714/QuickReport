@@ -124,7 +124,7 @@ class ImageAttachVC: UIViewController {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
-            mail.setToRecipients(["atik.bd08@gmail.com"])
+            mail.setToRecipients(recipients)
             
             var image_count = 1
             for image in images {

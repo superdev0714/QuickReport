@@ -18,6 +18,14 @@ class SecondTextInputVC: UIViewController {
     @IBOutlet weak var jobSizeTextView: UITextView!
     @IBOutlet weak var extraInfoTextView: UITextView!
     
+    var projectName: String?
+    var projectAddr: String?
+    var projectBg: String?
+    var customerName: String?
+    var customerPhone: String?
+    var customerEmail: String?
+    var projectCompletionDate: String?
+    
     @IBAction func nextButtonPressed(_ sender: Any) {
     }
 }

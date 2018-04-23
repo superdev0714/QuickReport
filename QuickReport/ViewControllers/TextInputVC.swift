@@ -70,15 +70,14 @@ class TextInputVC: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "NextScreen" {
-//            let destinationVC = segue.destination as! ImageAttachVC
-//            destinationVC.projectName = projectNameTextView.text
-//            destinationVC.builder = builderTextView.text
-//            destinationVC.applicator = applicatorTextView.text
-//            destinationVC.painter = painterTextView.text
-//            destinationVC.substrate = substrateTextView.text
-//            destinationVC.system = systemTextView.text
-//            destinationVC.jobSize = jobSizeTextView.text
-//            destinationVC.extraInfo = extraInfoTextView.text
+            let destinationVC = segue.destination as! SecondTextInputVC
+            destinationVC.projectName = projectNameTextView.text
+            destinationVC.projectAddr = projectAddrTextView.text
+            destinationVC.projectBg = projectBgTextView.text
+            destinationVC.customerName = customerNameTextView.text
+            destinationVC.customerPhone = customerPhoneTextView.text
+            destinationVC.customerEmail = customerEmailTextView.text
+            destinationVC.projectCompletionDate = projectCompletionDateTextView.text
         }
     }
     
@@ -141,7 +140,7 @@ class TextInputVC: UIViewController {
         if projectNameTextView.isFirstResponder ||
             projectAddrTextView.isFirstResponder ||
             projectBgTextView.isFirstResponder {
-            return
+                return
         }
         
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {

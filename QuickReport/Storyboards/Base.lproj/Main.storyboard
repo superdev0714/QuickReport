@@ -34,31 +34,43 @@
                                 <rect key="frame" x="16" y="147" width="343" height="430"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Project Name: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B81-c7-RIo">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="73"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="47.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Builder: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="M2f-bQ-QT6">
-                                        <rect key="frame" x="0.0" y="89" width="343" height="73.5"/>
+                                        <rect key="frame" x="0.0" y="63.5" width="343" height="48"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Applicator: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bce-D5-9xo">
-                                        <rect key="frame" x="0.0" y="178.5" width="343" height="73"/>
+                                        <rect key="frame" x="0.0" y="127.5" width="343" height="47.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Painter: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5cQ-aV-Iap">
-                                        <rect key="frame" x="0.0" y="267.5" width="343" height="73.5"/>
+                                        <rect key="frame" x="0.0" y="191" width="343" height="48"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Substrate: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="48s-3r-PKm">
-                                        <rect key="frame" x="0.0" y="357" width="343" height="73"/>
+                                        <rect key="frame" x="0.0" y="255" width="343" height="47.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="System: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ME8-c1-E8B">
+                                        <rect key="frame" x="0.0" y="318.5" width="343" height="48"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Job size (sqm): " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nEA-Rm-FLd">
+                                        <rect key="frame" x="0.0" y="382.5" width="343" height="47.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
@@ -94,9 +106,11 @@
                     <connections>
                         <outlet property="applicatorTextView" destination="bce-D5-9xo" id="bZw-3b-aNc"/>
                         <outlet property="builderTextView" destination="M2f-bQ-QT6" id="hki-3y-vcc"/>
+                        <outlet property="jobSizeTextView" destination="nEA-Rm-FLd" id="gd4-C7-hjW"/>
                         <outlet property="painterTextView" destination="5cQ-aV-Iap" id="We9-fI-LQo"/>
                         <outlet property="projectNameTextView" destination="B81-c7-RIo" id="Mwv-bw-tte"/>
                         <outlet property="substrateTextView" destination="48s-3r-PKm" id="Ivg-Wk-KSq"/>
+                        <outlet property="systemTextView" destination="ME8-c1-E8B" id="RDR-dm-h2Z"/>
                         <segue destination="bEe-ST-0ms" kind="show" identifier="NextScreen" id="Sf8-sg-DiK"/>
                     </connections>
                 </viewController>
@@ -115,12 +129,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ah5-0w-j5h">
                                 <rect key="frame" x="16" y="80" width="343" height="173"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description of photo 1: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uGt-6a-urC">
-                                <rect key="frame" x="16" y="418" width="343" height="129"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3y-yI-Aq1">
                                 <rect key="frame" x="127" y="273" width="120" height="120"/>
                                 <constraints>
@@ -143,25 +151,43 @@
                                     <action selector="uploadButtonPressed:" destination="bEe-ST-0ms" eventType="touchUpInside" id="ESH-EK-n42"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="UuO-Cb-9gA">
+                                <rect key="frame" x="16" y="413" width="343" height="143"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description of photo 1: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uGt-6a-urC">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="63.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Extra information (challenges, solutions, anything unique?): " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gE4-jx-mLl">
+                                        <rect key="frame" x="0.0" y="79.5" width="343" height="63.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.10323671251535416" green="0.1437869668006897" blue="0.32663881778717041" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Yye-fz-bda" firstAttribute="top" secondItem="uGt-6a-urC" secondAttribute="bottom" constant="25" id="7Ay-in-EM0"/>
                             <constraint firstItem="Yye-fz-bda" firstAttribute="centerX" secondItem="wK3-iv-KJb" secondAttribute="centerX" id="Dfh-54-JCv"/>
+                            <constraint firstItem="UuO-Cb-9gA" firstAttribute="top" secondItem="H3y-yI-Aq1" secondAttribute="bottom" constant="20" id="KNQ-n2-kON"/>
                             <constraint firstItem="H3y-yI-Aq1" firstAttribute="centerY" secondItem="wK3-iv-KJb" secondAttribute="centerY" id="LuL-j9-ERs"/>
                             <constraint firstItem="H3y-yI-Aq1" firstAttribute="centerX" secondItem="wK3-iv-KJb" secondAttribute="centerX" id="MOW-5E-NZl"/>
                             <constraint firstItem="VxI-8U-GjN" firstAttribute="trailing" secondItem="Ah5-0w-j5h" secondAttribute="trailing" constant="16" id="OQ4-wn-Hhu"/>
                             <constraint firstItem="H3y-yI-Aq1" firstAttribute="top" secondItem="Ah5-0w-j5h" secondAttribute="bottom" constant="20" id="PkO-F7-unB"/>
+                            <constraint firstItem="Yye-fz-bda" firstAttribute="top" secondItem="UuO-Cb-9gA" secondAttribute="bottom" constant="16" id="U1V-AP-Kkp"/>
                             <constraint firstItem="Ah5-0w-j5h" firstAttribute="top" secondItem="VxI-8U-GjN" secondAttribute="top" constant="16" id="aTO-XJ-k1d"/>
-                            <constraint firstItem="VxI-8U-GjN" firstAttribute="trailing" secondItem="uGt-6a-urC" secondAttribute="trailing" constant="16" id="dHn-xM-ult"/>
                             <constraint firstItem="Ah5-0w-j5h" firstAttribute="leading" secondItem="VxI-8U-GjN" secondAttribute="leading" constant="16" id="dht-i3-ce4"/>
+                            <constraint firstItem="VxI-8U-GjN" firstAttribute="trailing" secondItem="UuO-Cb-9gA" secondAttribute="trailing" constant="16" id="flc-7R-SCi"/>
+                            <constraint firstItem="UuO-Cb-9gA" firstAttribute="leading" secondItem="VxI-8U-GjN" secondAttribute="leading" constant="16" id="mdE-pX-6y5"/>
                             <constraint firstItem="VxI-8U-GjN" firstAttribute="bottom" secondItem="Yye-fz-bda" secondAttribute="bottom" constant="20" id="sT5-l2-MDZ"/>
-                            <constraint firstItem="uGt-6a-urC" firstAttribute="top" secondItem="H3y-yI-Aq1" secondAttribute="bottom" constant="25" id="wa7-HW-HIL"/>
-                            <constraint firstItem="uGt-6a-urC" firstAttribute="leading" secondItem="VxI-8U-GjN" secondAttribute="leading" constant="16" id="xoS-Ad-w6d"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VxI-8U-GjN"/>
                     </view>
                     <connections>
+                        <outlet property="extraInfoTextView" destination="gE4-jx-mLl" id="lsI-QL-vuW"/>
                         <outlet property="imageDescriptionTextView" destination="uGt-6a-urC" id="Ge4-ts-y5a"/>
                         <outlet property="previewImageView" destination="Ah5-0w-j5h" id="8Ee-3w-ATP"/>
                         <segue destination="dkA-kk-std" kind="show" identifier="EmailSent" id="qeg-xe-2fA"/>

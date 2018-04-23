@@ -15,12 +15,15 @@ class ImageAttachVC: UIViewController {
     
     @IBOutlet weak var previewImageView: UIImageView!
     @IBOutlet weak var imageDescriptionTextView: UITextView!
+    @IBOutlet weak var extraInfoTextView: UITextView!
     
     var projectName: String?
     var builder: String?
     var applicator: String?
     var painter: String?
     var substrate: String?
+    var system: String?
+    var jobSize: String?
     
     var images = [UIImage]()
     var descriptions = [String]()
@@ -60,6 +63,9 @@ class ImageAttachVC: UIViewController {
             let builder = builder,
             let applictor = applicator,
             let painter = painter,
+            let system = system,
+            let jobSize = jobSize,
+            let extraInfo = extraInfoTextView.text,
             let substrate = substrate else {
                 return
         }
@@ -69,6 +75,10 @@ class ImageAttachVC: UIViewController {
             <p>\(applictor)</p>
             <p>\(painter)</p>
             <p>\(substrate)</p>
+            <p>\(system)</p>
+            <p>\(jobSize)</p>
+            <p>Date completed: \(getTodaysDate())</p>
+            <p>\(extraInfo)</p>
         """
         
         for description in descriptions {
@@ -80,12 +90,20 @@ class ImageAttachVC: UIViewController {
         sendEmail(messageText: messageText, images: images)
     }
     
+    private func getTodaysDate() -> String {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM.dd.yyyy"
+        return formatter.string(from: date)
+    }
+    
     // MARK: -
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         imageDescriptionTextView.delegate = self
+        extraInfoTextView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {

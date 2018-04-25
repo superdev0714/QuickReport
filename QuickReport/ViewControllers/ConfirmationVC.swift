@@ -22,13 +22,13 @@ class ConfirmationVC: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             
             if let vc = self.navigationController?.viewControllers.first as? TextInputVC {
-                vc.projectNameTextView.text = "Project Name: "
-                vc.projectAddrTextView.text = "Project address: "
-                vc.projectBgTextView.text = "Project background: "
-                vc.customerNameTextView.text = "Customer name: "
-                vc.customerPhoneTextView.text = "Customer phone: "
-                vc.customerEmailTextView.text = "Customer email: "
-                vc.projectCompletionDateTextView.text = "Project completion date: "
+//                vc.projectNameTextView.text = "Project Name: "
+//                vc.projectAddrTextView.text = "Project address: "
+//                vc.projectBgTextView.text = "Project background: "
+//                vc.customerNameTextView.text = "Customer name: "
+//                vc.customerPhoneTextView.text = "Customer phone: "
+//                vc.customerEmailTextView.text = "Customer email: "
+//                vc.projectCompletionDateTextView.text = "Project completion date: "
             }
             
             self.navigationController!.popToRootViewController(animated: true)

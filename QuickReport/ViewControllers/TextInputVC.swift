@@ -12,13 +12,15 @@ class TextInputVC: UIViewController {
     
     // MARK: - Properties
     
-    @IBOutlet weak var projectNameTextView: UITextView!
-    @IBOutlet weak var projectAddrTextView: UITextView!
-    @IBOutlet weak var projectBgTextView: UITextView!
-    @IBOutlet weak var customerNameTextView: UITextView!
-    @IBOutlet weak var customerPhoneTextView: UITextView!
-    @IBOutlet weak var customerEmailTextView: UITextView!
-    @IBOutlet weak var projectCompletionDateTextView: UITextView!
+    @IBOutlet weak var projectCompletionDatePicker: UIDatePicker!
+    //    @IBOutlet weak var projectNameTextView: UITextView!
+//    @IBOutlet weak var projectAddrTextView: UITextView!
+//    @IBOutlet weak var projectBgTextView: UITextView!
+//    @IBOutlet weak var customerNameTextView: UITextView!
+//    @IBOutlet weak var customerPhoneTextView: UITextView!
+//    @IBOutlet weak var customerEmailTextView: UITextView!
+//    @IBOutlet weak var projectCompletionDateTextView: UITextView!
+    @IBOutlet weak var nextButton: UIButton!
     
     let keyName = "uname"
     let defaults = UserDefaults.standard
@@ -35,13 +37,17 @@ class TextInputVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        projectNameTextView.delegate = self
-        projectAddrTextView.delegate = self
-        projectBgTextView.delegate = self
-        customerNameTextView.delegate = self
-        customerPhoneTextView.delegate = self
-        customerEmailTextView.delegate = self
-        projectCompletionDateTextView.delegate = self
+        nextButton.imageView?.contentMode = .scaleAspectFit
+        
+        projectCompletionDatePicker.setValue(UIColor.white, forKey: "textColor")
+        
+//        projectNameTextView.delegate = self
+//        projectAddrTextView.delegate = self
+//        projectBgTextView.delegate = self
+//        customerNameTextView.delegate = self
+//        customerPhoneTextView.delegate = self
+//        customerEmailTextView.delegate = self
+//        projectCompletionDateTextView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -70,14 +76,14 @@ class TextInputVC: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "NextScreen" {
-            let destinationVC = segue.destination as! SecondTextInputVC
-            destinationVC.projectName = projectNameTextView.text
-            destinationVC.projectAddr = projectAddrTextView.text
-            destinationVC.projectBg = projectBgTextView.text
-            destinationVC.customerName = customerNameTextView.text
-            destinationVC.customerPhone = customerPhoneTextView.text
-            destinationVC.customerEmail = customerEmailTextView.text
-            destinationVC.projectCompletionDate = projectCompletionDateTextView.text
+//            let destinationVC = segue.destination as! SecondTextInputVC
+//            destinationVC.projectName = projectNameTextView.text
+//            destinationVC.projectAddr = projectAddrTextView.text
+//            destinationVC.projectBg = projectBgTextView.text
+//            destinationVC.customerName = customerNameTextView.text
+//            destinationVC.customerPhone = customerPhoneTextView.text
+//            destinationVC.customerEmail = customerEmailTextView.text
+//            destinationVC.projectCompletionDate = projectCompletionDateTextView.text
         }
     }
     
@@ -136,12 +142,12 @@ class TextInputVC: UIViewController {
             return
         }
         
-        // don't move the view for first three textViews
-        if projectNameTextView.isFirstResponder ||
-            projectAddrTextView.isFirstResponder ||
-            projectBgTextView.isFirstResponder {
-                return
-        }
+//        // don't move the view for first three textViews
+//        if projectNameTextView.isFirstResponder ||
+//            projectAddrTextView.isFirstResponder ||
+//            projectBgTextView.isFirstResponder {
+//                return
+//        }
         
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0 {

@@ -72,7 +72,7 @@ class ImageAttachVC: UIViewController {
             let customerName = customerName,
             let customerPhone = customerPhone,
             let customerEmail = customerEmail,
-            let projectCompletionDate = projectCompletionDate,
+            //let projectCompletionDate = projectCompletionDate,
             let builder = builder,
             let applictor = applicator,
             let painter = painter,
@@ -83,20 +83,20 @@ class ImageAttachVC: UIViewController {
                 return
         }
         var messageText = """
-            <p>\(projectName)</p>
-            <p>\(projectAddr)</p>
-            <p>\(projectBg)</p>
-            <p>\(customerName)</p>
-            <p>\(customerPhone)</p>
-            <p>\(customerEmail)</p>
-            <p>\(projectCompletionDate)</p>
-            <p>\(builder)</p>
-            <p>\(applictor)</p>
-            <p>\(painter)</p>
-            <p>\(substrate)</p>
-            <p>\(system)</p>
-            <p>\(jobSize)</p>
-            <p>\(extraInfo)</p>
+            <p><b>Project Name: </b>\(projectName)</p>
+            <p><b>Project address: </b>\(projectAddr)</p>
+            <p><b>Project background: </b>\(projectBg)</p>
+            <p><b>Customer name: </b>\(customerName)</p>
+            <p><b>Customer phone: </b>\(customerPhone)</p>
+            <p><b>Customer email: </b>\(customerEmail)</p>
+            <p><b>Project completion date: </b>\(projectCompletionDate)</p>
+            <p><b>Bilder: </b>\(builder)</p>
+            <p><b>Applictor: </b>\(applictor)</p>
+            <p><b>Painter: </b>\(painter)</p>
+            <p><b>Substrate: </b>\(substrate)</p>
+            <p><b>System: </b>\(system)</p>
+            <p><b>Job Size (sqm): </b>\(jobSize)</p>
+            <p><b>Extra Info: </b>\(extraInfo)</p>
         """
         
         for description in descriptions {

@@ -49,13 +49,20 @@ class TextInputVC: UIViewController {
         
         projectCompletionDatePicker.setValue(UIColor.white, forKey: "textColor")
         
-//        projectNameTextView.delegate = self
-//        projectAddrTextView.delegate = self
-//        projectBgTextView.delegate = self
-//        customerNameTextView.delegate = self
-//        customerPhoneTextView.delegate = self
-//        customerEmailTextView.delegate = self
-//        projectCompletionDateTextView.delegate = self
+        projectNameTextView.delegate = self
+        projectAddrTextView.delegate = self
+        projectBgTextView.delegate = self
+        customerNameTextView.delegate = self
+        customerPhoneTextView.delegate = self
+        customerEmailTextView.delegate = self
+        
+        builderTextView.delegate = self
+        applicatorTextView.delegate = self
+        painterTextView.delegate = self
+        substrateTextView.delegate = self
+        systemTextView.delegate = self
+        jobSizeTextView.delegate = self
+        extraInfoTextView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -150,12 +157,11 @@ class TextInputVC: UIViewController {
             return
         }
         
-//        // don't move the view for first three textViews
-//        if projectNameTextView.isFirstResponder ||
-//            projectAddrTextView.isFirstResponder ||
-//            projectBgTextView.isFirstResponder {
-//                return
-//        }
+        // don't move the view for first three textViews
+        if !jobSizeTextView.isFirstResponder &&
+            !extraInfoTextView.isFirstResponder {
+                return
+        }
         
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0 {

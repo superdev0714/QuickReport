@@ -98,7 +98,11 @@ class TextInputVC: UIViewController {
             destinationVC.customerName = customerNameTextView.text
             destinationVC.customerPhone = customerPhoneTextView.text
             destinationVC.customerEmail = customerEmailTextView.text
-//            destinationVC.projectCompletionDate = projectCompletionDateTextView.text
+            
+            // get date from date picker
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MMM dd, YYYY"
+            destinationVC.projectCompletionDate = dateFormatter.string(from: projectCompletionDatePicker.date)
             
             destinationVC.builder = builderTextView.text
             destinationVC.applicator = applicatorTextView.text

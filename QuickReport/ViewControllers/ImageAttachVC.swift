@@ -72,7 +72,7 @@ class ImageAttachVC: UIViewController {
             let customerName = customerName,
             let customerPhone = customerPhone,
             let customerEmail = customerEmail,
-            //let projectCompletionDate = projectCompletionDate,
+            let projectCompletionDate = projectCompletionDate,
             let builder = builder,
             let applictor = applicator,
             let painter = painter,

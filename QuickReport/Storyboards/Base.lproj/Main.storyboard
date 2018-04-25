@@ -49,7 +49,7 @@
                                                     <constraint firstAttribute="height" constant="55" id="UfG-IF-HDm"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="13"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lke-1u-Vs9">
                                                 <rect key="frame" x="0.0" y="92" width="449" height="17"/>
@@ -64,7 +64,7 @@
                                                     <constraint firstAttribute="height" constant="55" id="IcT-fO-5I6"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="13"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project background" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJj-2a-d0S">
                                                 <rect key="frame" x="0.0" y="184" width="449" height="17"/>
@@ -79,7 +79,7 @@
                                                     <constraint firstAttribute="height" constant="55" id="JBR-0P-cLx"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="13"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customer name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gy4-VP-1Gy">
                                                 <rect key="frame" x="0.0" y="276" width="449" height="17"/>
@@ -94,7 +94,7 @@
                                                     <constraint firstAttribute="height" constant="55" id="da2-WP-zkj"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="13"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customer phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMT-zT-obq">
                                                 <rect key="frame" x="0.0" y="368" width="449" height="17"/>
@@ -109,7 +109,7 @@
                                                     <constraint firstAttribute="height" constant="55" id="rAd-pQ-e41"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="13"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="phonePad" returnKeyType="done"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customer email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XW3-GA-YTt">
                                                 <rect key="frame" x="0.0" y="460" width="449" height="17"/>
@@ -124,7 +124,7 @@
                                                     <constraint firstAttribute="height" constant="55" id="IP8-sh-4OF"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="13"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="emailAddress" returnKeyType="done"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project completion date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DU3-HL-hYy">
                                                 <rect key="frame" x="0.0" y="552" width="449" height="17"/>
@@ -154,7 +154,7 @@
                                                     <constraint firstAttribute="height" constant="55" id="Anv-Jj-l7N"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="13"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Applicator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8H7-th-W0C">
                                                 <rect key="frame" x="0.0" y="731" width="449" height="17"/>
@@ -169,7 +169,7 @@
                                                     <constraint firstAttribute="height" constant="55" id="Qu4-EQ-FSf"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="13"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Painter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgR-HZ-akM">
                                                 <rect key="frame" x="0.0" y="823" width="449" height="17"/>
@@ -184,7 +184,7 @@
                                                     <constraint firstAttribute="height" constant="55" id="fZI-9f-Mcs"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="13"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Substrate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9FK-Iy-u7d">
                                                 <rect key="frame" x="0.0" y="915" width="449" height="17"/>
@@ -199,7 +199,7 @@
                                                     <constraint firstAttribute="height" constant="55" id="vQF-k5-xPc"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="13"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="System" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wiX-Fu-7cz">
                                                 <rect key="frame" x="0.0" y="1007" width="449" height="17"/>
@@ -214,7 +214,7 @@
                                                     <constraint firstAttribute="height" constant="55" id="2Cj-vj-JrK"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="13"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job size (sqm)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWX-rF-qk9">
                                                 <rect key="frame" x="0.0" y="1099" width="449" height="17"/>
@@ -229,7 +229,7 @@
                                                     <constraint firstAttribute="height" constant="55" id="hQY-WO-aMF"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="13"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="decimalPad" returnKeyType="done"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Extra information (challenges, solutions, anything unique?)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOR-AS-T7d">
                                                 <rect key="frame" x="0.0" y="1191" width="449" height="17"/>
@@ -244,7 +244,7 @@
                                                     <constraint firstAttribute="height" constant="55" id="QOy-Xv-xth"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="13"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaz-xq-ph8">
                                                 <rect key="frame" x="0.0" y="1283" width="449" height="75"/>

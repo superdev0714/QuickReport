@@ -253,6 +253,9 @@
                                                     <constraint firstAttribute="height" constant="75" id="vsC-4d-N0Q"/>
                                                 </constraints>
                                                 <state key="normal" image="arrow-flat"/>
+                                                <connections>
+                                                    <action selector="nextButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AwN-c7-qDs"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -279,14 +282,27 @@
                     </view>
                     <navigationItem key="navigationItem" id="ljN-xd-aAK"/>
                     <connections>
+                        <outlet property="applicatorTextView" destination="vzG-6z-mH3" id="M95-iw-iQZ"/>
+                        <outlet property="builderTextView" destination="UKx-iN-sIq" id="prC-nw-lYV"/>
+                        <outlet property="customerEmailTextView" destination="AI0-c1-ObG" id="SW2-7g-XWL"/>
+                        <outlet property="customerNameTextView" destination="wNJ-aX-5az" id="0Yu-XY-NCI"/>
+                        <outlet property="customerPhoneTextView" destination="e5b-Yd-e91" id="Vf0-d2-i2D"/>
+                        <outlet property="extraInfoTextView" destination="wQH-QM-x6m" id="3Xz-Q0-QHI"/>
+                        <outlet property="jobSizeTextView" destination="ZWq-Eu-7az" id="Lar-9Q-ZVT"/>
                         <outlet property="nextButton" destination="uaz-xq-ph8" id="fP7-jT-vuf"/>
+                        <outlet property="painterTextView" destination="BRX-4q-byd" id="Y9B-1H-684"/>
+                        <outlet property="projectAddrTextView" destination="q9d-zw-DuR" id="dUz-Pj-4BJ"/>
+                        <outlet property="projectBgTextView" destination="S9R-O9-m4r" id="V9z-6n-FgY"/>
                         <outlet property="projectCompletionDatePicker" destination="1S8-pW-284" id="osF-Dm-z0a"/>
+                        <outlet property="projectNameTextView" destination="Jpz-Mn-gRW" id="C0p-WJ-3dZ"/>
+                        <outlet property="substrateTextView" destination="MZZ-2k-e3g" id="gkC-AZ-s8P"/>
+                        <outlet property="systemTextView" destination="hUx-IX-tjM" id="RPn-ki-VvW"/>
                         <segue destination="1aR-SY-Dzq" kind="show" identifier="NextScreen" id="tp2-Jw-quT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="800.79999999999995" y="102.99850074962519"/>
+            <point key="canvasLocation" x="660" y="110"/>
         </scene>
         <!--Second Text InputVC-->
         <scene sceneID="HDK-Dc-9fH">

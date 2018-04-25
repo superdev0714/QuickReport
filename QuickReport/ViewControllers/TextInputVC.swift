@@ -12,14 +12,22 @@ class TextInputVC: UIViewController {
     
     // MARK: - Properties
     
+    @IBOutlet weak var projectNameTextView: UITextView!
+    @IBOutlet weak var projectAddrTextView: UITextView!
+    @IBOutlet weak var projectBgTextView: UITextView!
+    @IBOutlet weak var customerNameTextView: UITextView!
+    @IBOutlet weak var customerPhoneTextView: UITextView!
+    @IBOutlet weak var customerEmailTextView: UITextView!
     @IBOutlet weak var projectCompletionDatePicker: UIDatePicker!
-    //    @IBOutlet weak var projectNameTextView: UITextView!
-//    @IBOutlet weak var projectAddrTextView: UITextView!
-//    @IBOutlet weak var projectBgTextView: UITextView!
-//    @IBOutlet weak var customerNameTextView: UITextView!
-//    @IBOutlet weak var customerPhoneTextView: UITextView!
-//    @IBOutlet weak var customerEmailTextView: UITextView!
-//    @IBOutlet weak var projectCompletionDateTextView: UITextView!
+    
+    @IBOutlet weak var builderTextView: UITextView!
+    @IBOutlet weak var applicatorTextView: UITextView!
+    @IBOutlet weak var painterTextView: UITextView!
+    @IBOutlet weak var substrateTextView: UITextView!
+    @IBOutlet weak var systemTextView: UITextView!
+    @IBOutlet weak var jobSizeTextView: UITextView!
+    @IBOutlet weak var extraInfoTextView: UITextView!
+    
     @IBOutlet weak var nextButton: UIButton!
     
     let keyName = "uname"

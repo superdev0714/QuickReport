@@ -422,16 +422,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="confirmation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHo-VY-Lbb">
-                                <rect key="frame" x="97" y="243" width="180" height="180"/>
+                                <rect key="frame" x="112" y="258" width="150" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="3zZ-HL-A9G"/>
-                                    <constraint firstAttribute="height" constant="180" id="PR1-z5-KDy"/>
+                                    <constraint firstAttribute="width" constant="150" id="3zZ-HL-A9G"/>
+                                    <constraint firstAttribute="height" constant="150" id="PR1-z5-KDy"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CASE STUDY SUBMITTED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iv0-Nw-OOX">
+                                <rect key="frame" x="77" y="428" width="221" height="19"/>
+                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.10385585576295853" green="0.14775806665420532" blue="0.32467639446258545" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="iv0-Nw-OOX" firstAttribute="centerX" secondItem="Dev-5K-k8e" secondAttribute="centerX" id="h6F-1j-5mW"/>
                             <constraint firstItem="ZHo-VY-Lbb" firstAttribute="centerX" secondItem="Dev-5K-k8e" secondAttribute="centerX" id="uAB-AD-jN5"/>
+                            <constraint firstItem="iv0-Nw-OOX" firstAttribute="top" secondItem="ZHo-VY-Lbb" secondAttribute="bottom" constant="20" id="whH-JN-Txb"/>
                             <constraint firstItem="ZHo-VY-Lbb" firstAttribute="centerY" secondItem="Dev-5K-k8e" secondAttribute="centerY" id="zJF-gh-te4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qsR-Ke-zjZ"/>

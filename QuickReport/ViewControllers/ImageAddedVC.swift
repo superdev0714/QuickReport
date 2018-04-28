@@ -20,7 +20,7 @@ class ImageAddedVC: UIViewController {
         super.viewDidAppear(animated)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.navigationController!.popToRootViewController(animated: true)
+            self.navigationController!.popViewController(animated: true)
         }
     }
 }

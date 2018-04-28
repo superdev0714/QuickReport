@@ -39,9 +39,19 @@ class ImageAttachVC: UIViewController {
     
     // MARK: - Actions
     
+    @IBAction func addImageButtonPressed(_ sender: Any) {
+        if let _ = previewImageView.image {
+            addImageToUploadCollection()
+            
+            performSegue(withIdentifier: "ImageAdded", sender: nil)
+        } else {
+            let alert = UIAlertController(title: "Image Not Selected", message: "Please select an image from gallery.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
+    }
+    
     @IBAction func cameraButtonPressed(_ sender: Any) {
-        addImageToUploadCollection()
-        
         let picker = UIImagePickerController()
         picker.allowsEditing = true
         picker.delegate = self
@@ -63,8 +73,6 @@ class ImageAttachVC: UIViewController {
     @IBAction func uploadButtonPressed(_ sender: Any) {
         let defaults = UserDefaults.standard
         let username = defaults.string(forKey: "uname") ?? "unknown"
-        
-        addImageToUploadCollection()
         
         guard let projectName = projectName,
             let projectAddr = projectAddr,

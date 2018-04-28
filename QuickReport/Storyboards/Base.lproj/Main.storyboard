@@ -406,7 +406,7 @@
                         <outlet property="imageDescriptionTextView" destination="uGt-6a-urC" id="Ge4-ts-y5a"/>
                         <outlet property="previewImageView" destination="Ah5-0w-j5h" id="8Ee-3w-ATP"/>
                         <segue destination="dkA-kk-std" kind="show" identifier="EmailSent" id="qeg-xe-2fA"/>
-                        <segue destination="2Ro-eS-cHD" kind="show" identifier="ImageAdded" id="eEc-QW-FdJ"/>
+                        <segue destination="2Ro-eS-cHD" kind="presentation" identifier="ImageAdded" id="eEc-QW-FdJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ZK-w3-fT1" userLabel="First Responder" sceneMemberID="firstResponder"/>

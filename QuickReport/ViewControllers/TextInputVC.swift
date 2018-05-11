@@ -47,7 +47,8 @@ class TextInputVC: UIViewController {
         
         nextButton.imageView?.contentMode = .scaleAspectFit
         
-        projectCompletionDatePicker.setValue(UIColor.white, forKey: "textColor")
+        projectCompletionDatePicker.setValue(UIColor.black, forKey: "textColor")
+        projectCompletionDatePicker.backgroundColor = .white
         
         projectNameTextView.delegate = self
         projectAddrTextView.delegate = self

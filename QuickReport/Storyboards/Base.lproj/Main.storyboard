@@ -34,7 +34,7 @@
                                 <rect key="frame" x="16" y="147" width="343" height="500"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rwh-PF-uCO">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="1403.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="1430.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFE-B7-5IG">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="17"/>
@@ -141,14 +141,20 @@
                                                     <!--2018-04-25 08:30:32 +0000-->
                                                 </date>
                                             </datePicker>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Builder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikO-In-nX4">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scroll to project completion date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFw-VO-9zn">
                                                 <rect key="frame" x="0.0" y="639" width="343" height="17"/>
+                                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="15"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Builder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikO-In-nX4">
+                                                <rect key="frame" x="0.0" y="666" width="343" height="17"/>
                                                 <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UKx-iN-sIq">
-                                                <rect key="frame" x="0.0" y="666" width="343" height="55"/>
+                                                <rect key="frame" x="0.0" y="693" width="343" height="55"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="55" id="Anv-Jj-l7N"/>
@@ -157,13 +163,13 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Applicator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8H7-th-W0C">
-                                                <rect key="frame" x="0.0" y="731" width="343" height="17"/>
+                                                <rect key="frame" x="0.0" y="758" width="343" height="17"/>
                                                 <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vzG-6z-mH3">
-                                                <rect key="frame" x="0.0" y="758" width="343" height="55"/>
+                                                <rect key="frame" x="0.0" y="785" width="343" height="55"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="55" id="Qu4-EQ-FSf"/>
@@ -172,13 +178,13 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Painter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgR-HZ-akM">
-                                                <rect key="frame" x="0.0" y="823" width="343" height="17"/>
+                                                <rect key="frame" x="0.0" y="850" width="343" height="17"/>
                                                 <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BRX-4q-byd">
-                                                <rect key="frame" x="0.0" y="850" width="343" height="55"/>
+                                                <rect key="frame" x="0.0" y="877" width="343" height="55"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="55" id="fZI-9f-Mcs"/>
@@ -187,13 +193,13 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Substrate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9FK-Iy-u7d">
-                                                <rect key="frame" x="0.0" y="915" width="343" height="17"/>
+                                                <rect key="frame" x="0.0" y="942" width="343" height="17"/>
                                                 <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MZZ-2k-e3g">
-                                                <rect key="frame" x="0.0" y="942" width="343" height="55"/>
+                                                <rect key="frame" x="0.0" y="969" width="343" height="55"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="55" id="vQF-k5-xPc"/>
@@ -202,13 +208,13 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="System" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wiX-Fu-7cz">
-                                                <rect key="frame" x="0.0" y="1007" width="343" height="17"/>
+                                                <rect key="frame" x="0.0" y="1034" width="343" height="17"/>
                                                 <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hUx-IX-tjM">
-                                                <rect key="frame" x="0.0" y="1034" width="343" height="55"/>
+                                                <rect key="frame" x="0.0" y="1061" width="343" height="55"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="55" id="2Cj-vj-JrK"/>
@@ -217,13 +223,13 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job size (sqm)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWX-rF-qk9">
-                                                <rect key="frame" x="0.0" y="1099" width="343" height="17"/>
+                                                <rect key="frame" x="0.0" y="1126" width="343" height="17"/>
                                                 <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZWq-Eu-7az">
-                                                <rect key="frame" x="0.0" y="1126" width="343" height="55"/>
+                                                <rect key="frame" x="0.0" y="1153" width="343" height="55"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="55" id="hQY-WO-aMF"/>
@@ -232,13 +238,13 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="decimalPad" returnKeyType="done"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Extra information (challenges, solutions, anything unique?)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOR-AS-T7d">
-                                                <rect key="frame" x="0.0" y="1191" width="343" height="33.5"/>
+                                                <rect key="frame" x="0.0" y="1218" width="343" height="33.5"/>
                                                 <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wQH-QM-x6m">
-                                                <rect key="frame" x="0.0" y="1234.5" width="343" height="55"/>
+                                                <rect key="frame" x="0.0" y="1261.5" width="343" height="55"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="55" id="QOy-Xv-xth"/>
@@ -247,7 +253,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaz-xq-ph8">
-                                                <rect key="frame" x="0.0" y="1299.5" width="343" height="75"/>
+                                                <rect key="frame" x="0.0" y="1326.5" width="343" height="75"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="75" id="vsC-4d-N0Q"/>
                                                 </constraints>
@@ -257,7 +263,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OS2-VQ-6nO">
-                                                <rect key="frame" x="0.0" y="1384.5" width="343" height="19"/>
+                                                <rect key="frame" x="0.0" y="1411.5" width="343" height="19"/>
                                                 <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="17"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>

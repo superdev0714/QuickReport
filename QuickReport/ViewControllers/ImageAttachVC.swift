@@ -83,6 +83,16 @@ class ImageAttachVC: UIViewController {
     }
     
     @IBAction func uploadButtonPressed(_ sender: Any) {
+        let alertMsg = "The case study you submitted will now be put into an email for you to submit to the Marketing Department. Can you please click ‘send’ on the email that will app"
+        
+        let alert = UIAlertController(title: nil, message: alertMsg, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { _ in
+            self.startEmailSendingProcess()
+        }))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func startEmailSendingProcess() {
         let defaults = UserDefaults.standard
         let username = defaults.string(forKey: "uname") ?? "unknown"
         
@@ -103,20 +113,20 @@ class ImageAttachVC: UIViewController {
                 return
         }
         var messageText = """
-            <p><b>Project Name: </b>\(projectName)</p>
-            <p><b>Project address: </b>\(projectAddr)</p>
-            <p><b>Project background: </b>\(projectBg)</p>
-            <p><b>Customer name: </b>\(customerName)</p>
-            <p><b>Customer phone: </b>\(customerPhone)</p>
-            <p><b>Customer email: </b>\(customerEmail)</p>
-            <p><b>Project completion date: </b>\(projectCompletionDate)</p>
-            <p><b>Bilder: </b>\(builder)</p>
-            <p><b>Applictor: </b>\(applictor)</p>
-            <p><b>Painter: </b>\(painter)</p>
-            <p><b>Substrate: </b>\(substrate)</p>
-            <p><b>System: </b>\(system)</p>
-            <p><b>Job Size (sqm): </b>\(jobSize)</p>
-            <p><b>Extra Info: </b>\(extraInfo)</p>
+        <p><b>Project Name: </b>\(projectName)</p>
+        <p><b>Project address: </b>\(projectAddr)</p>
+        <p><b>Project background: </b>\(projectBg)</p>
+        <p><b>Customer name: </b>\(customerName)</p>
+        <p><b>Customer phone: </b>\(customerPhone)</p>
+        <p><b>Customer email: </b>\(customerEmail)</p>
+        <p><b>Project completion date: </b>\(projectCompletionDate)</p>
+        <p><b>Bilder: </b>\(builder)</p>
+        <p><b>Applictor: </b>\(applictor)</p>
+        <p><b>Painter: </b>\(painter)</p>
+        <p><b>Substrate: </b>\(substrate)</p>
+        <p><b>System: </b>\(system)</p>
+        <p><b>Job Size (sqm): </b>\(jobSize)</p>
+        <p><b>Extra Info: </b>\(extraInfo)</p>
         """
         
         for description in descriptions {

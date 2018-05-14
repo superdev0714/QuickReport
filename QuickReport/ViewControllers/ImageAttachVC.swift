@@ -78,6 +78,7 @@ class ImageAttachVC: UIViewController {
 
             photoDescriptionLabel.text = "DESCRIPTION OF PHOTO \(descriptions.count + 1):"
             submitPhotoLabel.text = "SUBMIT PHOTO \(descriptions.count + 1)"
+            imageDescriptionTextView.text = ""
         }
     }
     

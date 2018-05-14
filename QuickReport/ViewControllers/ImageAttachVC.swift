@@ -13,8 +13,8 @@ class ImageAttachVC: UIViewController {
     
     // MARK: - Properties
     
-    @IBOutlet weak var previewImageView: UIImageView!
     @IBOutlet weak var imageDescriptionTextView: UITextView!
+    @IBOutlet weak var cameraButton: UIButton!
     
     var projectName: String?
     var projectAddr: String?
@@ -37,12 +37,14 @@ class ImageAttachVC: UIViewController {
     
     let defaultDescription = "Description of photo"
     
+    var isImageSelected = false
+    
     // MARK: - Actions
     
     @IBAction func addImageButtonPressed(_ sender: Any) {
-        if let _ = previewImageView.image {
+        if isImageSelected {
             addImageToUploadCollection()
-            
+
             performSegue(withIdentifier: "ImageAdded", sender: nil)
         } else {
             let alert = UIAlertController(title: "Image Not Selected", message: "Please select an image from gallery.", preferredStyle: .alert)
@@ -59,13 +61,16 @@ class ImageAttachVC: UIViewController {
     }
     
     private func addImageToUploadCollection() {
-        if let image = previewImageView.image {
-            images.append(image)
-            
+        if isImageSelected {
+            if let image = cameraButton.imageView?.image {
+                images.append(image)
+            }
+            cameraButton.setImage(UIImage(named: "add-camera"), for: .normal)
+            isImageSelected = false
+
             let description = imageDescriptionTextView.text ?? defaultDescription + " \(descriptions.count): "
             descriptions.append(description)
-            
-            previewImageView.image = nil
+
             imageDescriptionTextView.text = defaultDescription + " \(descriptions.count + 1): "
         }
     }
@@ -213,7 +218,8 @@ extension ImageAttachVC: UIImagePickerControllerDelegate, UINavigationController
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         guard let image = info[UIImagePickerControllerEditedImage] as? UIImage else { return }
         
-        previewImageView.image = image
+        cameraButton.setImage(image, for: .normal)
+        isImageSelected = true
         
         dismiss(animated: true)
     }

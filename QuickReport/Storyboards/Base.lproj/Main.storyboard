@@ -331,7 +331,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3y-yI-Aq1">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3y-yI-Aq1">
                                 <rect key="frame" x="137.5" y="131" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="B7g-XD-Q8G"/>
@@ -353,8 +353,8 @@
                                     <action selector="uploadButtonPressed:" destination="bEe-ST-0ms" eventType="touchUpInside" id="ESH-EK-n42"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUBMIT REPORT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ax-xe-3ma">
-                                <rect key="frame" x="115" y="628" width="145.5" height="19"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUBMIT CASE STUDY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ax-xe-3ma">
+                                <rect key="frame" x="95" y="628" width="185" height="19"/>
                                 <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -446,6 +446,7 @@
                         <viewLayoutGuide key="safeArea" id="VxI-8U-GjN"/>
                     </view>
                     <connections>
+                        <outlet property="cameraButton" destination="H3y-yI-Aq1" id="Exg-A5-CKa"/>
                         <outlet property="imageDescriptionTextView" destination="uGt-6a-urC" id="Ge4-ts-y5a"/>
                         <segue destination="dkA-kk-std" kind="show" identifier="EmailSent" id="qeg-xe-2fA"/>
                         <segue destination="2Ro-eS-cHD" kind="presentation" identifier="ImageAdded" id="eEc-QW-FdJ"/>

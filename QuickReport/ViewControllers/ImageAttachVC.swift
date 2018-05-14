@@ -59,7 +59,17 @@ class ImageAttachVC: UIViewController {
         let picker = UIImagePickerController()
         picker.allowsEditing = true
         picker.delegate = self
-        present(picker, animated: true)
+        
+        let alert = UIAlertController(title: "Upload Photo", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Use Camera", style: .default, handler: { _ in
+            picker.sourceType = .camera
+            self.present(picker, animated: true)
+        }))
+        alert.addAction(UIAlertAction(title: "Use Camera Roll", style: .default, handler: { _ in
+            picker.sourceType = .photoLibrary
+            self.present(picker, animated: true)
+        }))
+        present(alert, animated: true)
     }
     
     private func addImageToUploadCollection() {

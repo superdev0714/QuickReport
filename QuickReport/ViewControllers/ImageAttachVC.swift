@@ -15,6 +15,8 @@ class ImageAttachVC: UIViewController {
     
     @IBOutlet weak var imageDescriptionTextView: UITextView!
     @IBOutlet weak var cameraButton: UIButton!
+    @IBOutlet weak var photoDescriptionLabel: UILabel!
+    @IBOutlet weak var submitPhotoLabel: UILabel!
     
     var projectName: String?
     var projectAddr: String?
@@ -68,10 +70,14 @@ class ImageAttachVC: UIViewController {
             cameraButton.setImage(UIImage(named: "add-camera"), for: .normal)
             isImageSelected = false
 
-            let description = imageDescriptionTextView.text ?? defaultDescription + " \(descriptions.count): "
+            var description = defaultDescription + " \(descriptions.count + 1): "
+            if let enteredDescription = imageDescriptionTextView.text {
+                description += enteredDescription
+            }
             descriptions.append(description)
 
-            imageDescriptionTextView.text = defaultDescription + " \(descriptions.count + 1): "
+            photoDescriptionLabel.text = "DESCRIPTION OF PHOTO \(descriptions.count + 1):"
+            submitPhotoLabel.text = "SUBMIT PHOTO \(descriptions.count + 1)"
         }
     }
     

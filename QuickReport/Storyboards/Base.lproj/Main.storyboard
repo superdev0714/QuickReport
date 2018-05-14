@@ -448,6 +448,8 @@
                     <connections>
                         <outlet property="cameraButton" destination="H3y-yI-Aq1" id="Exg-A5-CKa"/>
                         <outlet property="imageDescriptionTextView" destination="uGt-6a-urC" id="Ge4-ts-y5a"/>
+                        <outlet property="photoDescriptionLabel" destination="idB-p9-HSW" id="tj2-UC-PmZ"/>
+                        <outlet property="submitPhotoLabel" destination="wCV-EB-wWP" id="lGJ-ze-y8M"/>
                         <segue destination="dkA-kk-std" kind="show" identifier="EmailSent" id="qeg-xe-2fA"/>
                         <segue destination="2Ro-eS-cHD" kind="presentation" identifier="ImageAdded" id="eEc-QW-FdJ"/>
                     </connections>

@@ -93,7 +93,7 @@ class ImageAttachVC: UIViewController {
     }
     
     @IBAction func uploadButtonPressed(_ sender: Any) {
-        let alertMsg = "The case study you submitted will now be put into an email for you to submit to the Marketing Department. Can you please click ‘send’ on the email that will app"
+        let alertMsg = "Your email app will now open. Please click ‘send’ in the email for the case study to be submitted to the Marketing department"
         
         let alert = UIAlertController(title: nil, message: alertMsg, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { _ in

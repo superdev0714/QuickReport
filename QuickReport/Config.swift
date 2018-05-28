@@ -9,6 +9,6 @@
 import Foundation
 
 let recipients = [
-    "atik.bd08@gmail.com",
-    "mail@atikur.com",
+    "matthew.watson@dulux.com.au",
+    "andrew.sullivan@dulux.com.au",
 ]

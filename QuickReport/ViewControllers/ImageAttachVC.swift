@@ -126,11 +126,11 @@ class ImageAttachVC: UIViewController {
         <p><b>Project Name: </b>\(projectName)</p>
         <p><b>Project address: </b>\(projectAddr)</p>
         <p><b>Project background: </b>\(projectBg)</p>
-        <p><b>Customer name: </b>\(customerName)</p>
+        <p><b>Customer name (Asset Owner): </b>\(customerName)</p>
         <p><b>Customer phone: </b>\(customerPhone)</p>
         <p><b>Customer email: </b>\(customerEmail)</p>
         <p><b>Project completion date: </b>\(projectCompletionDate)</p>
-        <p><b>Bilder: </b>\(builder)</p>
+        <p><b>Builder: </b>\(builder)</p>
         <p><b>Applictor: </b>\(applictor)</p>
         <p><b>Painter: </b>\(painter)</p>
         <p><b>Substrate: </b>\(substrate)</p>

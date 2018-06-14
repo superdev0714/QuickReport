@@ -35,6 +35,7 @@ class ConfirmationVC: UIViewController {
                 vc.substrateTextView.text = ""
                 vc.systemTextView.text = ""
                 vc.jobSizeTextView.text = ""
+                vc.costOfBuildTextView.text = ""
                 vc.extraInfoTextView.text = ""
             }
             

@@ -26,6 +26,7 @@ class TextInputVC: UIViewController {
     @IBOutlet weak var substrateTextView: UITextView!
     @IBOutlet weak var systemTextView: UITextView!
     @IBOutlet weak var jobSizeTextView: UITextView!
+    @IBOutlet weak var costOfBuildTextView: UITextView!
     @IBOutlet weak var extraInfoTextView: UITextView!
     
     @IBOutlet weak var nextButton: UIButton!
@@ -63,6 +64,7 @@ class TextInputVC: UIViewController {
         substrateTextView.delegate = self
         systemTextView.delegate = self
         jobSizeTextView.delegate = self
+        costOfBuildTextView.delegate = self
         extraInfoTextView.delegate = self
     }
     
@@ -111,6 +113,7 @@ class TextInputVC: UIViewController {
             destinationVC.substrate = substrateTextView.text
             destinationVC.system = systemTextView.text
             destinationVC.jobSize = jobSizeTextView.text
+            destinationVC.costOfBuild = costOfBuildTextView.text
             destinationVC.extraInfo = extraInfoTextView.text
         }
     }
@@ -171,7 +174,7 @@ class TextInputVC: UIViewController {
         }
         
         // don't move the view for first three textViews
-        if !jobSizeTextView.isFirstResponder &&
+        if !costOfBuildTextView.isFirstResponder &&
             !extraInfoTextView.isFirstResponder {
                 return
         }

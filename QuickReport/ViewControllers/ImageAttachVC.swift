@@ -32,6 +32,7 @@ class ImageAttachVC: UIViewController {
     var substrate: String?
     var system: String?
     var jobSize: String?
+    var costOfBuild: String?
     var extraInfo: String?
     
     var images = [UIImage]()
@@ -119,6 +120,7 @@ class ImageAttachVC: UIViewController {
             let substrate = substrate,
             let system = system,
             let jobSize = jobSize,
+            let costOfBuild = costOfBuild,
             let extraInfo = extraInfo else {
                 return
         }
@@ -136,6 +138,7 @@ class ImageAttachVC: UIViewController {
         <p><b>Substrate: </b>\(substrate)</p>
         <p><b>System: </b>\(system)</p>
         <p><b>Job Size (sqm): </b>\(jobSize)</p>
+        <p><b>$ value of total project (cost of build): </b>\(costOfBuild)</p>
         <p><b>Extra Info: </b>\(extraInfo)</p>
         """
         

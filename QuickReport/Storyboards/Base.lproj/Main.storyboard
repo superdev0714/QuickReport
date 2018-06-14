@@ -34,7 +34,7 @@
                                 <rect key="frame" x="16" y="147" width="343" height="500"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rwh-PF-uCO">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="1485.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="1577.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFE-B7-5IG">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="17"/>
@@ -237,14 +237,29 @@
                                                 <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="13"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="decimalPad" returnKeyType="done"/>
                                             </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ value of total project (cost of build)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9h-m4-4P9">
+                                                <rect key="frame" x="0.0" y="1218" width="343" height="17"/>
+                                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iaV-gc-eHF">
+                                                <rect key="frame" x="0.0" y="1245" width="343" height="55"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="VPs-BY-ffY"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="13"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="decimalPad" returnKeyType="done"/>
+                                            </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Extra information (challenges, solutions, anything unique?)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOR-AS-T7d">
-                                                <rect key="frame" x="0.0" y="1218" width="343" height="33.5"/>
+                                                <rect key="frame" x="0.0" y="1310" width="343" height="33.5"/>
                                                 <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wQH-QM-x6m">
-                                                <rect key="frame" x="0.0" y="1261.5" width="343" height="110"/>
+                                                <rect key="frame" x="0.0" y="1353.5" width="343" height="110"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="110" id="QOy-Xv-xth"/>
@@ -253,7 +268,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaz-xq-ph8">
-                                                <rect key="frame" x="0.0" y="1381.5" width="343" height="75"/>
+                                                <rect key="frame" x="0.0" y="1473.5" width="343" height="75"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="75" id="vsC-4d-N0Q"/>
                                                 </constraints>
@@ -263,7 +278,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OS2-VQ-6nO">
-                                                <rect key="frame" x="0.0" y="1466.5" width="343" height="19"/>
+                                                <rect key="frame" x="0.0" y="1558.5" width="343" height="19"/>
                                                 <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="17"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -303,6 +318,7 @@
                     <connections>
                         <outlet property="applicatorTextView" destination="vzG-6z-mH3" id="M95-iw-iQZ"/>
                         <outlet property="builderTextView" destination="UKx-iN-sIq" id="prC-nw-lYV"/>
+                        <outlet property="costOfBuildTextView" destination="iaV-gc-eHF" id="S9x-CY-0jP"/>
                         <outlet property="customerEmailTextView" destination="AI0-c1-ObG" id="SW2-7g-XWL"/>
                         <outlet property="customerNameTextView" destination="wNJ-aX-5az" id="0Yu-XY-NCI"/>
                         <outlet property="customerPhoneTextView" destination="e5b-Yd-e91" id="Vf0-d2-i2D"/>

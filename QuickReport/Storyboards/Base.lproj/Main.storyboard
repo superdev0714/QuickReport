@@ -250,7 +250,7 @@
                                                     <constraint firstAttribute="height" constant="55" id="VPs-BY-ffY"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="13"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="decimalPad" returnKeyType="done"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Extra information (challenges, solutions, anything unique?)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOR-AS-T7d">
                                                 <rect key="frame" x="0.0" y="1310" width="343" height="33.5"/>

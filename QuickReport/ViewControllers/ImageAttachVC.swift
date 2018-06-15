@@ -13,10 +13,7 @@ class ImageAttachVC: UIViewController {
     
     // MARK: - Properties
     
-    @IBOutlet weak var imageDescriptionTextView: UITextView!
     @IBOutlet weak var cameraButton: UIButton!
-    @IBOutlet weak var photoDescriptionLabel: UILabel!
-    @IBOutlet weak var submitPhotoLabel: UILabel!
     
     var projectName: String?
     var projectAddr: String?
@@ -36,25 +33,8 @@ class ImageAttachVC: UIViewController {
     var extraInfo: String?
     
     var images = [UIImage]()
-    var descriptions = [String]()
-    
-    let defaultDescription = "Description of photo"
-    
-    var isImageSelected = false
     
     // MARK: - Actions
-    
-    @IBAction func addImageButtonPressed(_ sender: Any) {
-        if isImageSelected {
-            addImageToUploadCollection()
-
-            performSegue(withIdentifier: "ImageAdded", sender: nil)
-        } else {
-            let alert = UIAlertController(title: "Image Not Selected", message: "Please select an image from gallery.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            present(alert, animated: true, completion: nil)
-        }
-    }
     
     @IBAction func cameraButtonPressed(_ sender: Any) {
         let picker = UIImagePickerController()
@@ -73,24 +53,8 @@ class ImageAttachVC: UIViewController {
         present(alert, animated: true)
     }
     
-    private func addImageToUploadCollection() {
-        if isImageSelected {
-            if let image = cameraButton.imageView?.image {
-                images.append(image)
-            }
-            cameraButton.setImage(UIImage(named: "add-camera"), for: .normal)
-            isImageSelected = false
-
-            var description = defaultDescription + " \(descriptions.count + 1): "
-            if let enteredDescription = imageDescriptionTextView.text {
-                description += enteredDescription
-            }
-            descriptions.append(description)
-
-            photoDescriptionLabel.text = "DESCRIPTION OF PHOTO \(descriptions.count + 1):"
-            submitPhotoLabel.text = "SUBMIT PHOTO \(descriptions.count + 1)"
-            imageDescriptionTextView.text = ""
-        }
+    private func addImageToUploadCollection(image: UIImage) {
+        images.append(image)
     }
     
     @IBAction func uploadButtonPressed(_ sender: Any) {
@@ -142,10 +106,6 @@ class ImageAttachVC: UIViewController {
         <p><b>Extra Info: </b>\(extraInfo)</p>
         """
         
-        for description in descriptions {
-            messageText += "<p>\(description)</p>"
-        }
-        
         messageText += "<p>Report By: \(username)</p>"
         
         sendEmail(messageText: messageText, images: images)
@@ -155,8 +115,6 @@ class ImageAttachVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        imageDescriptionTextView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -248,10 +206,10 @@ extension ImageAttachVC: UIImagePickerControllerDelegate, UINavigationController
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         guard let image = info[UIImagePickerControllerEditedImage] as? UIImage else { return }
         
-        cameraButton.setImage(image, for: .normal)
-        isImageSelected = true
+        addImageToUploadCollection(image: image)
         
         dismiss(animated: true)
+        performSegue(withIdentifier: "ImageAdded", sender: nil)
     }
 }
 

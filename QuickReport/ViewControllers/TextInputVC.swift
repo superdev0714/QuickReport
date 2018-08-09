@@ -30,10 +30,6 @@ class TextInputVC: UIViewController {
     @IBOutlet weak var extraInfoTextView: UITextView!
     
     @IBOutlet weak var nextButton: UIButton!
-    
-    let keyName = "uname"
-    let defaults = UserDefaults.standard
-    var isUserEnteredName = false
 
     // MARK: - Actions
     
@@ -80,18 +76,6 @@ class TextInputVC: UIViewController {
         unsubscribeKeyboardNotifications()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        if let uname = defaults.string(forKey: keyName) {
-            print("hello \(uname)")
-            isUserEnteredName = true
-        } else {
-            print("show alert to set user name.")
-            getUserNameAlert()
-        }
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ImageUploadScreen" {
             let destinationVC = segue.destination as! ImageAttachVC
@@ -118,33 +102,6 @@ class TextInputVC: UIViewController {
         }
     }
     
-    // MARK: - Username input
-    
-    private func getUserNameAlert() {
-        let alert = UIAlertController(title: "Enter your name", message: nil, preferredStyle: .alert)
-        alert.addTextField {
-            textField in
-            textField.placeholder = "Your Name"
-        }
-        
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {[weak alert] (_)in
-            guard let textField = alert?.textFields?.first else {
-                return
-            }
-            
-            guard let name = textField.text, !name.isEmpty else {
-                // keep showing alert until username is provided
-                self.getUserNameAlert()
-                return
-            }
-            
-            self.defaults.set(name, forKey: self.keyName)
-            self.isUserEnteredName = true
-        }))
-        
-        present(alert, animated: true)
-    }
-    
     // MARK: - Subscribe/unsubscribe keyboard notifications
     
     private func subscribeKeyboardNotifications() {
@@ -168,11 +125,6 @@ class TextInputVC: UIViewController {
     // MARK: - Handle keyboard notifications
     
     @objc func keyboardWillShow(notification: NSNotification) {
-        // don't move the view before username is provided
-        if !isUserEnteredName {
-            return
-        }
-        
         // don't move the view for first three textViews
         if !costOfBuildTextView.isFirstResponder &&
             !extraInfoTextView.isFirstResponder {

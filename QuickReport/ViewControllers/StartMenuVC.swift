@@ -13,8 +13,8 @@ class StartMenuVC: UIViewController {
     let keyName = "uname"
     let defaults = UserDefaults.standard
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
         if let uname = defaults.string(forKey: keyName) {
             print("hello \(uname)")

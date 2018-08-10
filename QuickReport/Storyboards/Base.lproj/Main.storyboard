@@ -615,13 +615,66 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type of Learning" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jX7-oS-POr">
+                                <rect key="frame" x="16" y="147" width="129" height="17"/>
+                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GRH-OH-31Q">
+                                <rect key="frame" x="16" y="172" width="343" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="CnT-TP-cnc"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learning" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Lg-lb-GTI">
+                                <rect key="frame" x="16" y="320" width="67" height="17"/>
+                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JtQ-XU-RxU">
+                                <rect key="frame" x="16" y="345" width="343" height="165"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEXT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VaO-t5-e5h">
+                                <rect key="frame" x="163" y="628" width="49" height="19"/>
+                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKl-XV-S2W">
+                                <rect key="frame" x="150" y="545" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="3ZW-cm-ii0"/>
+                                    <constraint firstAttribute="height" constant="75" id="d02-3m-5OR"/>
+                                </constraints>
+                                <state key="normal" image="arrow-flat"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.10385585576295853" green="0.14775806665420532" blue="0.32467639446258545" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="GRH-OH-31Q" firstAttribute="top" secondItem="jX7-oS-POr" secondAttribute="bottom" constant="8" id="0ml-Eo-4ZT"/>
+                            <constraint firstItem="ERl-kX-hh5" firstAttribute="trailing" secondItem="JtQ-XU-RxU" secondAttribute="trailing" constant="16" id="51g-4V-rjo"/>
+                            <constraint firstItem="jX7-oS-POr" firstAttribute="leading" secondItem="ERl-kX-hh5" secondAttribute="leading" constant="16" id="DOw-Vo-Dnp"/>
+                            <constraint firstItem="VKl-XV-S2W" firstAttribute="top" secondItem="JtQ-XU-RxU" secondAttribute="bottom" constant="35" id="DdG-Ev-Bau"/>
+                            <constraint firstItem="jX7-oS-POr" firstAttribute="top" secondItem="IUv-IT-d02" secondAttribute="bottom" constant="8" id="ERr-l1-dno"/>
                             <constraint firstItem="IUv-IT-d02" firstAttribute="top" secondItem="ERl-kX-hh5" secondAttribute="top" id="Jf7-XX-2MB"/>
                             <constraint firstItem="LrG-dN-TBo" firstAttribute="centerY" secondItem="IUv-IT-d02" secondAttribute="centerY" id="Kmc-GN-x3k"/>
+                            <constraint firstItem="ERl-kX-hh5" firstAttribute="bottom" secondItem="VaO-t5-e5h" secondAttribute="bottom" constant="20" id="MOX-39-jSP"/>
+                            <constraint firstItem="VKl-XV-S2W" firstAttribute="centerX" secondItem="y4e-nH-79t" secondAttribute="centerX" id="Nde-jJ-JLp"/>
                             <constraint firstItem="IUv-IT-d02" firstAttribute="leading" secondItem="ERl-kX-hh5" secondAttribute="leading" constant="16" id="Ndt-uB-TOL"/>
+                            <constraint firstItem="VaO-t5-e5h" firstAttribute="centerX" secondItem="y4e-nH-79t" secondAttribute="centerX" id="Nus-Dv-qRv"/>
+                            <constraint firstItem="JtQ-XU-RxU" firstAttribute="leading" secondItem="ERl-kX-hh5" secondAttribute="leading" constant="16" id="UuE-Ia-fOF"/>
+                            <constraint firstItem="ERl-kX-hh5" firstAttribute="trailing" secondItem="GRH-OH-31Q" secondAttribute="trailing" constant="16" id="WNJ-3C-5wP"/>
+                            <constraint firstItem="JtQ-XU-RxU" firstAttribute="top" secondItem="8Lg-lb-GTI" secondAttribute="bottom" constant="8" id="al7-b0-qUI"/>
+                            <constraint firstItem="VaO-t5-e5h" firstAttribute="top" secondItem="VKl-XV-S2W" secondAttribute="bottom" constant="8" id="cEq-C3-xQ4"/>
                             <constraint firstItem="LrG-dN-TBo" firstAttribute="leading" secondItem="IUv-IT-d02" secondAttribute="trailing" constant="17" id="cnY-zu-wTa"/>
+                            <constraint firstItem="GRH-OH-31Q" firstAttribute="leading" secondItem="ERl-kX-hh5" secondAttribute="leading" constant="16" id="ksd-P9-KWp"/>
+                            <constraint firstItem="8Lg-lb-GTI" firstAttribute="leading" secondItem="ERl-kX-hh5" secondAttribute="leading" constant="16" id="ttK-Pz-ZFw"/>
+                            <constraint firstItem="8Lg-lb-GTI" firstAttribute="top" secondItem="GRH-OH-31Q" secondAttribute="bottom" constant="8" id="uIN-Jn-KZb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ERl-kX-hh5"/>
                     </view>

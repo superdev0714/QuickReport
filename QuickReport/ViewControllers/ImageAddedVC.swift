@@ -14,6 +14,8 @@ class ImageAddedVC: UIViewController {
         if let navController = self.navigationController, navController.viewControllers.count >= 2 {
             if let vc = navController.viewControllers[navController.viewControllers.count - 2] as? ImageAttachVC {
                 vc.images = []
+            } else if let vc = navController.viewControllers[navController.viewControllers.count - 2] as? SalesRepImageAttachVC {
+                vc.images = []
             }
         }
         
@@ -25,6 +27,9 @@ class ImageAddedVC: UIViewController {
             if let vc = navController.viewControllers[navController.viewControllers.count - 2] as? ImageAttachVC {
                 self.navigationController!.popViewController(animated: true)
                 vc.cameraButtonPressed(sender)
+            } else if let vc = navController.viewControllers[navController.viewControllers.count - 2] as? SalesRepImageAttachVC {
+                self.navigationController!.popViewController(animated: true)
+                vc.cameraButtonPressed(sender)
             }
         }
     }
@@ -34,6 +39,9 @@ class ImageAddedVC: UIViewController {
             if let vc = navController.viewControllers[navController.viewControllers.count - 2] as? ImageAttachVC {
                 self.navigationController!.popViewController(animated: true)
                 vc.uploadButtonPressed(sender)
+            } else if let vc = navController.viewControllers[navController.viewControllers.count - 2] as? SalesRepImageAttachVC {
+                self.navigationController!.popViewController(animated: true)
+                vc.submitButtonPressed(sender)
             }
         }        
     }

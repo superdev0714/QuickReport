@@ -456,7 +456,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y2v-5y-XVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3888.8000000000002" y="-277.51124437781112"/>
+            <point key="canvasLocation" x="3884" y="103"/>
         </scene>
         <!--Image AddedVC-->
         <scene sceneID="dfK-vB-F7O">
@@ -529,7 +529,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ez-br-ATS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3888.8000000000002" y="420.53973013493254"/>
+            <point key="canvasLocation" x="4022" y="867"/>
         </scene>
         <!--Start MenuVC-->
         <scene sceneID="RZe-Jm-WeC">
@@ -724,6 +724,9 @@
                                     <constraint firstAttribute="height" constant="150" id="sJy-bO-Nth"/>
                                 </constraints>
                                 <state key="normal" image="add-camera"/>
+                                <connections>
+                                    <action selector="cameraButtonPressed:" destination="B1u-80-vgR" eventType="touchUpInside" id="nph-Eo-Rvy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgY-ZF-sZo">
                                 <rect key="frame" x="150" y="515" width="75" height="75"/>
@@ -732,6 +735,9 @@
                                     <constraint firstAttribute="width" constant="75" id="gAP-vw-Pmh"/>
                                 </constraints>
                                 <state key="normal" image="upload-icon"/>
+                                <connections>
+                                    <action selector="submitButtonPressed:" destination="B1u-80-vgR" eventType="touchUpInside" id="o0x-iP-2ps"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUBMIT LEARNINGS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuY-Jt-Mwq">
                                 <rect key="frame" x="98.5" y="598" width="178" height="19"/>
@@ -776,6 +782,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cgj-eS-NkQ"/>
                     </view>
+                    <connections>
+                        <segue destination="dkA-kk-std" kind="show" identifier="EmailSent" id="tm0-8H-BAu"/>
+                        <segue destination="2Ro-eS-cHD" kind="show" identifier="ImageAdded" id="UdW-ZH-S55"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TCd-rO-u60" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -789,4 +799,8 @@
         <image name="logo" width="938" height="616"/>
         <image name="upload-icon" width="256" height="256"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="UdW-ZH-S55"/>
+        <segue reference="tm0-8H-BAu"/>
+    </inferredMetricsTieBreakers>
 </document>

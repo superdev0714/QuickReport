@@ -13,6 +13,7 @@
 		244293C3208D948900C83228 /* ConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244293C2208D948900C83228 /* ConfirmationVC.swift */; };
 		244293C5208D98BE00C83228 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244293C4208D98BE00C83228 /* Config.swift */; };
 		245EA5E6211D3EB5003005E7 /* SalesRepTextInputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245EA5E5211D3EB5003005E7 /* SalesRepTextInputVC.swift */; };
+		245EA5E8211D449F003005E7 /* SalesRepImageAttachVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245EA5E7211D449F003005E7 /* SalesRepImageAttachVC.swift */; };
 		24669F5B2087C65A00BE3B41 /* ImageAttachVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24669F5A2087C65A00BE3B41 /* ImageAttachVC.swift */; };
 		24F915A52087403400D31CCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F915A42087403400D31CCF /* AppDelegate.swift */; };
 		24F915A72087403400D31CCF /* TextInputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F915A62087403400D31CCF /* TextInputVC.swift */; };
@@ -28,6 +29,7 @@
 		244293C2208D948900C83228 /* ConfirmationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationVC.swift; sourceTree = "<group>"; };
 		244293C4208D98BE00C83228 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		245EA5E5211D3EB5003005E7 /* SalesRepTextInputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesRepTextInputVC.swift; sourceTree = "<group>"; };
+		245EA5E7211D449F003005E7 /* SalesRepImageAttachVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesRepImageAttachVC.swift; sourceTree = "<group>"; };
 		24669F5A2087C65A00BE3B41 /* ImageAttachVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAttachVC.swift; sourceTree = "<group>"; };
 		24F915A12087403400D31CCF /* QuickReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F915A42087403400D31CCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				244293C2208D948900C83228 /* ConfirmationVC.swift */,
 				2435E04A2094170A00F2C95D /* ImageAddedVC.swift */,
 				245EA5E5211D3EB5003005E7 /* SalesRepTextInputVC.swift */,
+				245EA5E7211D449F003005E7 /* SalesRepImageAttachVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				244293C5208D98BE00C83228 /* Config.swift in Sources */,
 				24F915A72087403400D31CCF /* TextInputVC.swift in Sources */,
 				24F915A52087403400D31CCF /* AppDelegate.swift in Sources */,
+				245EA5E8211D449F003005E7 /* SalesRepImageAttachVC.swift in Sources */,
 				2435E04B2094170A00F2C95D /* ImageAddedVC.swift in Sources */,
 				242804DC211C660200F16AE0 /* StartMenuVC.swift in Sources */,
 			);

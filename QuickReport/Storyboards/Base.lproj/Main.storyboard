@@ -684,11 +684,12 @@
                     <connections>
                         <outlet property="learningTextView" destination="JtQ-XU-RxU" id="sQH-Az-u8H"/>
                         <outlet property="typeOfLearningPicker" destination="GRH-OH-31Q" id="DI8-M7-lgi"/>
+                        <segue destination="B1u-80-vgR" kind="show" identifier="SalesRepNext" id="6gk-Um-2ec"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rmq-0J-8ys" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2216.8000000000002" y="802.848575712144"/>
+            <point key="canvasLocation" x="2212" y="883"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qd0-G8-8KK">
@@ -707,6 +708,78 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Np9-uc-MEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="599" y="473"/>
+        </scene>
+        <!--Sales Rep Image AttachVC-->
+        <scene sceneID="3wA-SJ-inr">
+            <objects>
+                <viewController id="B1u-80-vgR" customClass="SalesRepImageAttachVC" customModule="QuickReport" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u9N-0t-9Pb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yF-9s-jlW">
+                                <rect key="frame" x="112" y="258" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="OWD-q6-ael"/>
+                                    <constraint firstAttribute="height" constant="150" id="sJy-bO-Nth"/>
+                                </constraints>
+                                <state key="normal" image="add-camera"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgY-ZF-sZo">
+                                <rect key="frame" x="150" y="515" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="FgI-SZ-wDQ"/>
+                                    <constraint firstAttribute="width" constant="75" id="gAP-vw-Pmh"/>
+                                </constraints>
+                                <state key="normal" image="upload-icon"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUBMIT LEARNINGS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuY-Jt-Mwq">
+                                <rect key="frame" x="98.5" y="598" width="178" height="19"/>
+                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="egt-PH-TiK">
+                                <rect key="frame" x="16" y="64" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="9qO-Hk-K5m"/>
+                                    <constraint firstAttribute="width" constant="75" id="IKP-OM-rnc"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sales Rep Learnings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFR-sU-70c">
+                                <rect key="frame" x="108" y="92" width="174" height="19"/>
+                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UPLOAD PHOTO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nzr-6F-cpZ">
+                                <rect key="frame" x="124" y="416" width="126" height="17"/>
+                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.10323671249999999" green="0.1437869668" blue="0.32663881779999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3yF-9s-jlW" firstAttribute="centerX" secondItem="u9N-0t-9Pb" secondAttribute="centerX" id="5nC-Ay-V8V"/>
+                            <constraint firstItem="cuY-Jt-Mwq" firstAttribute="top" secondItem="RgY-ZF-sZo" secondAttribute="bottom" constant="8" id="6Ct-eQ-hXC"/>
+                            <constraint firstItem="RgY-ZF-sZo" firstAttribute="centerX" secondItem="u9N-0t-9Pb" secondAttribute="centerX" id="DEb-HV-VW0"/>
+                            <constraint firstItem="Nzr-6F-cpZ" firstAttribute="top" secondItem="3yF-9s-jlW" secondAttribute="bottom" constant="8" id="Eud-iz-92p"/>
+                            <constraint firstItem="egt-PH-TiK" firstAttribute="leading" secondItem="cgj-eS-NkQ" secondAttribute="leading" constant="16" id="GO8-GK-xhH"/>
+                            <constraint firstItem="cuY-Jt-Mwq" firstAttribute="centerX" secondItem="u9N-0t-9Pb" secondAttribute="centerX" id="IZL-8t-3g0"/>
+                            <constraint firstItem="gFR-sU-70c" firstAttribute="centerY" secondItem="egt-PH-TiK" secondAttribute="centerY" id="KWM-Jl-WQ1"/>
+                            <constraint firstItem="gFR-sU-70c" firstAttribute="leading" secondItem="egt-PH-TiK" secondAttribute="trailing" constant="17" id="cXd-Ge-J1n"/>
+                            <constraint firstItem="egt-PH-TiK" firstAttribute="top" secondItem="cgj-eS-NkQ" secondAttribute="top" id="fBg-hs-6CP"/>
+                            <constraint firstItem="Nzr-6F-cpZ" firstAttribute="centerX" secondItem="u9N-0t-9Pb" secondAttribute="centerX" id="h1S-2G-K2L"/>
+                            <constraint firstItem="3yF-9s-jlW" firstAttribute="centerY" secondItem="u9N-0t-9Pb" secondAttribute="centerY" id="mRV-9i-N2a"/>
+                            <constraint firstItem="cgj-eS-NkQ" firstAttribute="bottom" secondItem="cuY-Jt-Mwq" secondAttribute="bottom" constant="50" id="nZD-y2-lVG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cgj-eS-NkQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TCd-rO-u60" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3073" y="867"/>
         </scene>
     </scenes>
     <resources>

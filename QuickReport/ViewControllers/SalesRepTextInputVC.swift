@@ -16,6 +16,7 @@ class SalesRepTextInputVC: UIViewController {
     @IBOutlet weak var learningTextView: UITextView!
     
     @IBAction func nextButtonTapped(_ sender: Any) {
+        performSegue(withIdentifier: "SalesRepNext", sender: nil)
     }
     
     override func viewDidLoad() {

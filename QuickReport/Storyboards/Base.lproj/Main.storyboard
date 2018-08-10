@@ -482,11 +482,14 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ioN-hO-gpu">
-                                <rect key="frame" x="35" y="412.5" width="305" height="94"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ioN-hO-gpu">
+                                <rect key="frame" x="27.5" y="412.5" width="320" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gig-N7-80s">
-                                        <rect key="frame" x="0.0" y="0.0" width="305" height="28"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="KYp-1o-SM7"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
                                         <state key="normal" title="DELETE PREVIOUSLY UPLOADED PHOTOS">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -496,7 +499,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xO2-D0-zRZ">
-                                        <rect key="frame" x="55" y="33" width="195" height="28"/>
+                                        <rect key="frame" x="0.0" y="36" width="320" height="28"/>
                                         <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
                                         <state key="normal" title="UPLOAD ANOTHER PHOTO">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -506,7 +509,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBi-qO-3OG">
-                                        <rect key="frame" x="76" y="66" width="153" height="28"/>
+                                        <rect key="frame" x="0.0" y="72" width="320" height="28"/>
                                         <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="14"/>
                                         <state key="normal" title="SUBMIT CASE STUDY">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -516,6 +519,10 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="BBi-qO-3OG" firstAttribute="width" secondItem="Gig-N7-80s" secondAttribute="width" id="TK0-72-V9b"/>
+                                    <constraint firstItem="xO2-D0-zRZ" firstAttribute="width" secondItem="Gig-N7-80s" secondAttribute="width" id="eNR-Ye-Pge"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.10385585576295853" green="0.14775806665420532" blue="0.32467639446258545" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -530,7 +537,9 @@
                         <viewLayoutGuide key="safeArea" id="ZaS-iT-LtS"/>
                     </view>
                     <connections>
+                        <outlet property="deletePreviousButton" destination="Gig-N7-80s" id="8vr-Pr-lVc"/>
                         <outlet property="submitButton" destination="BBi-qO-3OG" id="Frh-uf-QcS"/>
+                        <outlet property="uploadAnotherButton" destination="xO2-D0-zRZ" id="9RQ-j0-5Gn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ez-br-ATS" userLabel="First Responder" sceneMemberID="firstResponder"/>

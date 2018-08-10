@@ -89,6 +89,16 @@ class SalesRepImageAttachVC: UIViewController {
             print("Email send failed.")
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "EmailSent" {
+            let destVC = segue.destination as! ConfirmationVC
+            destVC.isSalesRepLearningEmail = true
+        } else if segue.identifier == "ImageAdded" {
+            let destVC = segue.destination as! ImageAddedVC
+            destVC.isSalesRepLearningImage = true
+        }
+    }
 }
 
 extension SalesRepImageAttachVC: MFMailComposeViewControllerDelegate {

@@ -547,8 +547,11 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGT-9t-7yN">
-                                <rect key="frame" x="65.5" y="271" width="243" height="32"/>
-                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="18"/>
+                                <rect key="frame" x="62" y="271" width="250" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="KJv-DL-S6f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="17"/>
                                 <state key="normal" title="CASE STUDY SUBMISSION">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -557,8 +560,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebC-hF-HN0">
-                                <rect key="frame" x="78" y="316" width="219" height="32"/>
-                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="18"/>
+                                <rect key="frame" x="62.5" y="315" width="250" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="gKI-iD-det"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="17"/>
                                 <state key="normal" title="SALES REP LEARNINGS">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -576,6 +582,10 @@
                         <viewLayoutGuide key="safeArea" id="TUL-f2-d4S"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ump-gx-1Xv"/>
+                    <connections>
+                        <outlet property="caseStudyButton" destination="RGT-9t-7yN" id="4oa-qO-Y69"/>
+                        <outlet property="salesRepButton" destination="ebC-hF-HN0" id="tqS-0U-hjx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ySU-5e-NH0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

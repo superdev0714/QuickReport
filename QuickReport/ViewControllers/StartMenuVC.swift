@@ -13,6 +13,21 @@ class StartMenuVC: UIViewController {
     let keyName = "uname"
     let defaults = UserDefaults.standard
     
+    @IBOutlet weak var caseStudyButton: UIButton!
+    @IBOutlet weak var salesRepButton: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        caseStudyButton.layer.borderWidth = 2.0
+        caseStudyButton.layer.cornerRadius = 5.0
+        caseStudyButton.layer.borderColor = UIColor.white.cgColor
+        
+        salesRepButton.layer.borderWidth = 2.0
+        salesRepButton.layer.cornerRadius = 5.0
+        salesRepButton.layer.borderColor = UIColor.white.cgColor
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         

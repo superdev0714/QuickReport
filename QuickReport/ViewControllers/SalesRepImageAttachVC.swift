@@ -10,4 +10,13 @@ import UIKit
 
 class SalesRepImageAttachVC: UIViewController {
     
+    var typeOfLearning: String?
+    var learning: String?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        print(typeOfLearning)
+        print(learning)
+    }
 }

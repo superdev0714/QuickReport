@@ -568,6 +568,9 @@
                                 <state key="normal" title="SALES REP LEARNINGS">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="lwu-aL-1S3" kind="show" id="O5R-jr-KnN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.10385585576295853" green="0.14775806665420532" blue="0.32467639446258545" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -589,7 +592,43 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ySU-5e-NH0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1350" y="331"/>
+            <point key="canvasLocation" x="1348" y="473"/>
+        </scene>
+        <!--Sales Rep Text InputVC-->
+        <scene sceneID="dkK-Jv-Uuj">
+            <objects>
+                <viewController id="lwu-aL-1S3" customClass="SalesRepTextInputVC" customModule="QuickReport" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y4e-nH-79t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="IUv-IT-d02">
+                                <rect key="frame" x="16" y="64" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="3wd-Id-hnB"/>
+                                    <constraint firstAttribute="width" constant="75" id="ydt-Q4-OZb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sales Rep Learnings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LrG-dN-TBo">
+                                <rect key="frame" x="108" y="92" width="174" height="19"/>
+                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.10385585576295853" green="0.14775806665420532" blue="0.32467639446258545" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IUv-IT-d02" firstAttribute="top" secondItem="ERl-kX-hh5" secondAttribute="top" id="Jf7-XX-2MB"/>
+                            <constraint firstItem="LrG-dN-TBo" firstAttribute="centerY" secondItem="IUv-IT-d02" secondAttribute="centerY" id="Kmc-GN-x3k"/>
+                            <constraint firstItem="IUv-IT-d02" firstAttribute="leading" secondItem="ERl-kX-hh5" secondAttribute="leading" constant="16" id="Ndt-uB-TOL"/>
+                            <constraint firstItem="LrG-dN-TBo" firstAttribute="leading" secondItem="IUv-IT-d02" secondAttribute="trailing" constant="17" id="cnY-zu-wTa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ERl-kX-hh5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rmq-0J-8ys" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2216.8000000000002" y="802.848575712144"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qd0-G8-8KK">
@@ -607,7 +646,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Np9-uc-MEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="620" y="331"/>
+            <point key="canvasLocation" x="599" y="473"/>
         </scene>
     </scenes>
     <resources>

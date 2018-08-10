@@ -453,6 +453,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qsR-Ke-zjZ"/>
                     </view>
+                    <connections>
+                        <outlet property="confirmLabel" destination="iv0-Nw-OOX" id="L3z-0l-4yu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y2v-5y-XVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -526,6 +529,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZaS-iT-LtS"/>
                     </view>
+                    <connections>
+                        <outlet property="submitButton" destination="BBi-qO-3OG" id="Frh-uf-QcS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ez-br-ATS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

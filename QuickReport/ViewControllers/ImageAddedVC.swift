@@ -10,6 +10,24 @@ import UIKit
 
 class ImageAddedVC: UIViewController {
     
+    var isSalesRepLearningImage: Bool?
+    
+    @IBOutlet weak var submitButton: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        if let isSalesRepLearningImage = isSalesRepLearningImage {
+            if isSalesRepLearningImage {
+                submitButton.setTitle("SUBMIT LEARNINGS", for: .normal)
+            } else {
+                submitButton.setTitle("SUBMIT CASE STUDY", for: .normal)
+            }
+        }
+        
+        self.navigationItem.setHidesBackButton(true, animated:true)
+    }
+    
     @IBAction func deletePreviousButtonPressed(_ sender: Any) {
         if let navController = self.navigationController, navController.viewControllers.count >= 2 {
             if let vc = navController.viewControllers[navController.viewControllers.count - 2] as? ImageAttachVC {
@@ -44,11 +62,5 @@ class ImageAddedVC: UIViewController {
                 vc.submitButtonPressed(sender)
             }
         }        
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.navigationItem.setHidesBackButton(true, animated:true)
     }
 }

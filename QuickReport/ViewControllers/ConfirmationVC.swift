@@ -10,8 +10,20 @@ import UIKit
 
 class ConfirmationVC: UIViewController {
     
+    @IBOutlet weak var confirmLabel: UILabel!
+    
+    var isSalesRepLearningEmail: Bool?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let isSalesRepLearningEmail = isSalesRepLearningEmail {
+            if isSalesRepLearningEmail {
+                confirmLabel.text = "LEARNINGS SUBMITTED"
+            } else {
+                confirmLabel.text = "CASE STUDY SUBMITTED"
+            }
+        }
         
         self.navigationItem.setHidesBackButton(true, animated:true);
     }

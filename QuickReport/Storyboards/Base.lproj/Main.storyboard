@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z0W-no-zB3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CDC-Pa-ucD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -337,7 +337,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1273" y="103"/>
+            <point key="canvasLocation" x="2212" y="102.99850074962519"/>
         </scene>
         <!--Image AttachVC-->
         <scene sceneID="gg7-0Q-mcL">
@@ -420,7 +420,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ZK-w3-fT1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2133.5999999999999" y="102.99850074962519"/>
+            <point key="canvasLocation" x="3072.8000000000002" y="102.99850074962519"/>
         </scene>
         <!--ConfirmationVC-->
         <scene sceneID="mwz-X9-eDU">
@@ -456,7 +456,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y2v-5y-XVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2951" y="-277"/>
+            <point key="canvasLocation" x="3888.8000000000002" y="-277.51124437781112"/>
         </scene>
         <!--Image AddedVC-->
         <scene sceneID="dfK-vB-F7O">
@@ -529,7 +529,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ez-br-ATS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2950" y="421"/>
+            <point key="canvasLocation" x="3888.8000000000002" y="420.53973013493254"/>
         </scene>
         <!--Start MenuVC-->
         <scene sceneID="RZe-Jm-WeC">
@@ -540,24 +540,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="jef-VY-Dol">
-                                <rect key="frame" x="67" y="56" width="240" height="128"/>
+                                <rect key="frame" x="67" y="100" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="dn3-gq-Lww"/>
                                     <constraint firstAttribute="width" constant="240" id="fny-pB-Ce9"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGT-9t-7yN">
-                                <rect key="frame" x="65.5" y="227" width="243" height="32"/>
+                                <rect key="frame" x="65.5" y="271" width="243" height="32"/>
                                 <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="18"/>
                                 <state key="normal" title="CASE STUDY SUBMISSION">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="CDC-Pa-ucD" kind="show" id="aOe-N5-yXK"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Hn1-7P-7FA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebC-hF-HN0">
-                                <rect key="frame" x="78" y="272" width="219" height="32"/>
+                                <rect key="frame" x="78" y="316" width="219" height="32"/>
                                 <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="18"/>
                                 <state key="normal" title="SALES REP LEARNINGS">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -575,10 +575,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TUL-f2-d4S"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Ump-gx-1Xv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ySU-5e-NH0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-444" y="336"/>
+            <point key="canvasLocation" x="1350" y="331"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qd0-G8-8KK">
@@ -591,12 +592,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Hwj-rU-Ddq"/>
+                        <segue destination="z0W-no-zB3" kind="relationship" relationship="rootViewController" id="OTR-sP-drb"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Np9-uc-MEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="428" y="103"/>
+            <point key="canvasLocation" x="620" y="331"/>
         </scene>
     </scenes>
     <resources>

@@ -652,6 +652,9 @@
                                     <constraint firstAttribute="height" constant="75" id="d02-3m-5OR"/>
                                 </constraints>
                                 <state key="normal" image="arrow-flat"/>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="lwu-aL-1S3" eventType="touchUpInside" id="t5d-bG-Ez2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.10385585576295853" green="0.14775806665420532" blue="0.32467639446258545" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -678,6 +681,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ERl-kX-hh5"/>
                     </view>
+                    <connections>
+                        <outlet property="learningTextView" destination="JtQ-XU-RxU" id="sQH-Az-u8H"/>
+                        <outlet property="typeOfLearningPicker" destination="GRH-OH-31Q" id="DI8-M7-lgi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rmq-0J-8ys" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

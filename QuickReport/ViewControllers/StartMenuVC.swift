@@ -10,11 +10,12 @@ import UIKit
 
 class StartMenuVC: UIViewController {
     
-    let keyName = "uname"
+    let keyEmail = "uemail"
     let defaults = UserDefaults.standard
     
     @IBOutlet weak var caseStudyButton: UIButton!
     @IBOutlet weak var salesRepButton: UIButton!
+    @IBOutlet weak var glisButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,26 +27,30 @@ class StartMenuVC: UIViewController {
         salesRepButton.layer.borderWidth = 2.0
         salesRepButton.layer.cornerRadius = 5.0
         salesRepButton.layer.borderColor = UIColor.white.cgColor
+        
+        glisButton.layer.borderWidth = 2.0
+        glisButton.layer.cornerRadius = 5.0
+        glisButton.layer.borderColor = UIColor.white.cgColor
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if let uname = defaults.string(forKey: keyName) {
-            print("hello \(uname)")
+        if let uemail = defaults.string(forKey: keyEmail) {
+            print("hello \(uemail)")
         } else {
-            print("show alert to set user name.")
-            getUserNameAlert()
+            print("show alert to set user email.")
+            getUserEmailAlert()
         }
     }
     
-    // MARK: - Username input
+    // MARK: - User email input
     
-    private func getUserNameAlert() {
-        let alert = UIAlertController(title: "Enter your name", message: nil, preferredStyle: .alert)
+    private func getUserEmailAlert() {
+        let alert = UIAlertController(title: "Enter your email address", message: nil, preferredStyle: .alert)
         alert.addTextField {
             textField in
-            textField.placeholder = "Your Name"
+            textField.placeholder = "Your Email Address"
         }
         
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {[weak alert] (_)in
@@ -55,14 +60,26 @@ class StartMenuVC: UIViewController {
             
             guard let name = textField.text, !name.isEmpty else {
                 // keep showing alert until username is provided
-                self.getUserNameAlert()
+                self.getUserEmailAlert()
                 return
             }
             
-            self.defaults.set(name, forKey: self.keyName)
+            if (!self.isValidEmail(testStr: name)) {
+                self.getUserEmailAlert()
+                return
+            }
+            
+            self.defaults.set(name, forKey: self.keyEmail)
         }))
         
         present(alert, animated: true)
+    }
+    
+    private func isValidEmail(testStr:String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: testStr)
     }
     
 }

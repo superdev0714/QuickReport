@@ -7,28 +7,36 @@
 //
 
 import UIKit
+import MessageUI
 
 class SalesRepTextInputVC: UIViewController {
     
+    var comments = [String]()
     var typesOfLearning = [String]()
+    var images = [UIImage]()
     
     @IBOutlet weak var typeOfLearningPicker: UIPickerView!
     @IBOutlet weak var learningTextView: UITextView!
     
-    @IBAction func nextButtonTapped(_ sender: Any) {
-        performSegue(withIdentifier: "SalesRepNext", sender: nil)
+    @IBAction func submitButtonTapped(_ sender: Any) {
+        let alertMsg = "Your email app will now open. Please click ‘send’ in the email for the learnings to be submitted to the Marketing department"
+        
+        let alert = UIAlertController(title: nil, message: alertMsg, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { _ in
+            self.startEmailSendingProcess()
+        }))
+        present(alert, animated: true, completion: nil)
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         typesOfLearning = [
+            "Customers",
             "Products",
             "Competitors",
-            "Industry",
             "Substrates",
-            "Customers/Applicators",
-            "Safety",
             "Other"
         ]
         
@@ -39,13 +47,28 @@ class SalesRepTextInputVC: UIViewController {
         typeOfLearningPicker.backgroundColor = .white
         
         learningTextView.delegate = self
+        learningTextView.text = "Enter Your Learnings Here"
+        learningTextView.textColor = UIColor.lightGray
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "Enter Your Learning Here"
+            textView.textColor = UIColor.lightGray
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "SalesRepNext" {
-            let destinationVC = segue.destination as! SalesRepImageAttachVC
-            destinationVC.typeOfLearning = typesOfLearning[typeOfLearningPicker.selectedRow(inComponent: 0)]
-            destinationVC.learning = learningTextView.text
+        if segue.identifier == "EmailSent" {
+            let destVC = segue.destination as! ConfirmationVC
+            destVC.isSalesRepLearningEmail = true
         }
     }
     
@@ -59,6 +82,63 @@ class SalesRepTextInputVC: UIViewController {
         super.viewWillDisappear(animated)
         
         unsubscribeKeyboardNotifications()
+    }
+    
+    private func startEmailSendingProcess() {
+        let defaults = UserDefaults.standard
+        let email = defaults.string(forKey: "uemail") ?? "unknown"
+      
+        guard let typeOfLearning = typesOfLearning[typeOfLearningPicker.selectedRow(inComponent: 0)] as? String ,
+            let learning = learningTextView.text else {
+                return
+        }
+        
+        var messageText = """
+        <p><b>Type of Learning: </b>\(typeOfLearning)</p>
+        <p><b>Learning: </b>\(learning)</p>
+        """
+        
+        var index = 1
+        for strComment in comments {
+            messageText += "<p>Photo\(index): \(strComment)</p>"
+            index += 1
+        }
+        
+        messageText += "<p>Submitted By: \(email)</p>"
+        
+        sendEmail(messageText: messageText, images: images)
+    }
+    
+    // MARK: - Send email
+    
+    private func sendEmail(messageText: String, images: [UIImage]) {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            let salesRecipients = [
+                "insights@acratex.com.au"
+                ]
+            mail.setToRecipients(salesRecipients)
+            
+            var image_count = 1
+            for image in images {
+                mail.addAttachmentData(UIImageJPEGRepresentation(image, CGFloat(1.0))!, mimeType: "image/jpeg", fileName: "image\(image_count).jpeg")
+                image_count += 1
+            }
+            
+            mail.setSubject("SALES REP LEARNING")
+            mail.setMessageBody(messageText, isHTML: true)
+            
+            present(mail, animated: true)
+        } else {
+            // show failure alert
+            print("Email send failed.")
+            let alertMsg = "Email send failed."
+            
+            let alert = UIAlertController(title: nil, message: alertMsg, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Close", style: .cancel, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
     }
     
     // MARK: - Subscribe/unsubscribe keyboard notifications
@@ -121,5 +201,16 @@ extension SalesRepTextInputVC: UITextViewDelegate {
             return false
         }
         return true
+    }
+}
+
+extension SalesRepTextInputVC: MFMailComposeViewControllerDelegate {
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        if result == .sent {
+            performSegue(withIdentifier: "EmailSentSuccess", sender: nil)
+        }
+        
+        controller.dismiss(animated: true)
     }
 }

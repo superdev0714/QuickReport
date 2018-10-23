@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import MessageUI
+//import MessageUI
 
 class ImageAttachVC: UIViewController {
     
@@ -15,30 +15,16 @@ class ImageAttachVC: UIViewController {
     
     @IBOutlet weak var cameraButton: UIButton!
     
-    var projectName: String?
-    var projectAddr: String?
-    var projectBg: String?
-    var customerName: String?
-    var customerPhone: String?
-    var customerEmail: String?
-    var projectCompletionDate: String?
-    
-    var builder: String?
-    var applicator: String?
-    var painter: String?
-    var substrate: String?
-    var system: String?
-    var jobSize: String?
-    var costOfBuild: String?
-    var extraInfo: String?
+    var comments = [String]()
     
     var images = [UIImage]()
+    var selectedImage = UIImage()
     
     // MARK: - Actions
     
     @IBAction func cameraButtonPressed(_ sender: Any) {
         let picker = UIImagePickerController()
-        picker.allowsEditing = true
+        picker.allowsEditing = false
         picker.delegate = self
         
         let alert = UIAlertController(title: "Upload Photo", message: nil, preferredStyle: .alert)
@@ -50,6 +36,7 @@ class ImageAttachVC: UIViewController {
             picker.sourceType = .photoLibrary
             self.present(picker, animated: true)
         }))
+        alert.addAction(UIAlertAction(title: "CANCEL", style: .cancel, handler: nil))
         present(alert, animated: true)
     }
     
@@ -57,59 +44,10 @@ class ImageAttachVC: UIViewController {
         images.append(image)
     }
     
-    @IBAction func uploadButtonPressed(_ sender: Any) {
-        let alertMsg = "Your email app will now open. Please click ‘send’ in the email for the case study to be submitted to the Marketing department"
-        
-        let alert = UIAlertController(title: nil, message: alertMsg, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { _ in
-            self.startEmailSendingProcess()
-        }))
-        present(alert, animated: true, completion: nil)
+    @IBAction func nextButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "ShowTextInput", sender: nil)
     }
     
-    private func startEmailSendingProcess() {
-        let defaults = UserDefaults.standard
-        let username = defaults.string(forKey: "uname") ?? "unknown"
-        
-        guard let projectName = projectName,
-            let projectAddr = projectAddr,
-            let projectBg = projectBg,
-            let customerName = customerName,
-            let customerPhone = customerPhone,
-            let customerEmail = customerEmail,
-            let projectCompletionDate = projectCompletionDate,
-            let builder = builder,
-            let applictor = applicator,
-            let painter = painter,
-            let substrate = substrate,
-            let system = system,
-            let jobSize = jobSize,
-            let costOfBuild = costOfBuild,
-            let extraInfo = extraInfo else {
-                return
-        }
-        var messageText = """
-        <p><b>Project Name: </b>\(projectName)</p>
-        <p><b>Project address: </b>\(projectAddr)</p>
-        <p><b>Project background: </b>\(projectBg)</p>
-        <p><b>Customer name (Asset Owner): </b>\(customerName)</p>
-        <p><b>Customer phone: </b>\(customerPhone)</p>
-        <p><b>Customer email: </b>\(customerEmail)</p>
-        <p><b>Project completion date: </b>\(projectCompletionDate)</p>
-        <p><b>Builder: </b>\(builder)</p>
-        <p><b>Applictor: </b>\(applictor)</p>
-        <p><b>Painter: </b>\(painter)</p>
-        <p><b>Substrate: </b>\(substrate)</p>
-        <p><b>System: </b>\(system)</p>
-        <p><b>Job Size (sqm): </b>\(jobSize)</p>
-        <p><b>$ value of total project (cost of build): </b>\(costOfBuild)</p>
-        <p><b>Extra Info: </b>\(extraInfo)</p>
-        """
-        
-        messageText += "<p>Report By: \(username)</p>"
-        
-        sendEmail(messageText: messageText, images: images)
-    }
     
     // MARK: -
     
@@ -129,30 +67,18 @@ class ImageAttachVC: UIViewController {
         unsubscribeKeyboardNotifications()
     }
     
-    // MARK: - Send email
-    
-    private func sendEmail(messageText: String, images: [UIImage]) {
-        if MFMailComposeViewController.canSendMail() {
-            let mail = MFMailComposeViewController()
-            mail.mailComposeDelegate = self
-            mail.setToRecipients(recipients)
-            
-            var image_count = 1
-            for image in images {
-                mail.addAttachmentData(UIImageJPEGRepresentation(image, CGFloat(1.0))!, mimeType: "image/jpeg", fileName: "image\(image_count).jpeg")
-                image_count += 1
-            }
-            
-            mail.setSubject("Report")
-            mail.setMessageBody(messageText, isHTML: true)
-            
-            present(mail, animated: true)
-        } else {
-            // show failure alert
-            print("Email send failed.")
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowTextInput" {
+            let destinationVC = segue.destination as! TextInputVC
+            destinationVC.comments = comments
+            destinationVC.images = images
+        } else if segue.identifier == "ImageAdded" {
+            let destVC = segue.destination as! ImageAddedVC
+            destVC.image = selectedImage
+            destVC.isSalesRepLearningImage = false
         }
     }
-    
+  
     // MARK: - Subscribe/unsubscribe keyboard notifications
     
     private func subscribeKeyboardNotifications() {
@@ -190,27 +116,32 @@ class ImageAttachVC: UIViewController {
     }
 }
 
-extension ImageAttachVC: MFMailComposeViewControllerDelegate {
-    
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        if result == .sent {
-            performSegue(withIdentifier: "EmailSent", sender: nil)
-        }
-        
-        controller.dismiss(animated: true)
-    }
-}
-
 extension ImageAttachVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        guard let image = info[UIImagePickerControllerEditedImage] as? UIImage else { return }
+        guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else { return }
         
         addImageToUploadCollection(image: image)
-        
+        selectedImage = image
+//        if picker.sourceType == .camera {
+//            UIImageWriteToSavedPhotosAlbum(image, self, Selector(("image:didFinishSavingWithError:contextInfo:")), nil)
+//        } else {
         dismiss(animated: true)
         performSegue(withIdentifier: "ImageAdded", sender: nil)
+//        }
+        
     }
+    
+//    func image(image: UIImage, didFinishSavingWithError error:NSError?, contextInfo: UnsafeRawPointer) {
+//        guard error == nil else {
+//            // Error saving image
+//            return
+//        }
+//        // Image saved successfully
+//
+//        dismiss(animated: true)
+//        performSegue(withIdentifier: "ImageAdded", sender: nil)
+//    }
 }
 
 extension ImageAttachVC: UITextViewDelegate {

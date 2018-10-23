@@ -20,6 +20,8 @@
 		24F915AA2087403400D31CCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24F915A82087403400D31CCF /* Main.storyboard */; };
 		24F915AC2087403500D31CCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24F915AB2087403500D31CCF /* Assets.xcassets */; };
 		24F915AF2087403500D31CCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24F915AD2087403500D31CCF /* LaunchScreen.storyboard */; };
+		A2BAE0E021760F3B00AB8381 /* GLIVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BAE0DF21760F3B00AB8381 /* GLIVC.swift */; };
+		D7B7986D21759A0600369A84 /* AddCommentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B7986C21759A0600369A84 /* AddCommentsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		24F915AB2087403500D31CCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24F915AE2087403500D31CCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24F915B02087403500D31CCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2BAE0DF21760F3B00AB8381 /* GLIVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLIVC.swift; sourceTree = "<group>"; };
+		D7B7986C21759A0600369A84 /* AddCommentsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				2435E04A2094170A00F2C95D /* ImageAddedVC.swift */,
 				245EA5E5211D3EB5003005E7 /* SalesRepTextInputVC.swift */,
 				245EA5E7211D449F003005E7 /* SalesRepImageAttachVC.swift */,
+				D7B7986C21759A0600369A84 /* AddCommentsVC.swift */,
+				A2BAE0DF21760F3B00AB8381 /* GLIVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -184,8 +190,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2BAE0E021760F3B00AB8381 /* GLIVC.swift in Sources */,
 				24669F5B2087C65A00BE3B41 /* ImageAttachVC.swift in Sources */,
 				245EA5E6211D3EB5003005E7 /* SalesRepTextInputVC.swift in Sources */,
+				D7B7986D21759A0600369A84 /* AddCommentsVC.swift in Sources */,
 				244293C3208D948900C83228 /* ConfirmationVC.swift in Sources */,
 				244293C5208D98BE00C83228 /* Config.swift in Sources */,
 				24F915A72087403400D31CCF /* TextInputVC.swift in Sources */,
@@ -336,8 +344,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9PYG64528E;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 58RUZNJEGW;
 				INFOPLIST_FILE = QuickReport/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -346,6 +355,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.dulux.QuickReportApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "66b605f7-b852-4c2d-9b33-8cbd61de8e8a";
+				PROVISIONING_PROFILE_SPECIFIER = TrackPing_Dev;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -355,8 +366,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9PYG64528E;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = QuickReport/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -365,6 +377,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.dulux.QuickReportApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

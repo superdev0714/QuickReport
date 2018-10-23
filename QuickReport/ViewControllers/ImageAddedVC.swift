@@ -11,19 +11,22 @@ import UIKit
 class ImageAddedVC: UIViewController {
     
     var isSalesRepLearningImage = false
+    var image = UIImage()
     
     @IBOutlet weak var deletePreviousButton: UIButton!
     @IBOutlet weak var uploadAnotherButton: UIButton!
-    @IBOutlet weak var submitButton: UIButton!
+//    @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var addCommentsButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if isSalesRepLearningImage {
-            submitButton.setTitle("SUBMIT LEARNINGS", for: .normal)
-        } else {
-            submitButton.setTitle("SUBMIT CASE STUDY", for: .normal)
-        }
+//        if isSalesRepLearningImage {
+//            submitButton.setTitle("SUBMIT LEARNINGS", for: .normal)
+//        } else {
+//            submitButton.setTitle("SUBMIT CASE STUDY", for: .normal)
+//        }
         
         deletePreviousButton.layer.borderWidth = 2.0
         deletePreviousButton.layer.cornerRadius = 5.0
@@ -33,9 +36,13 @@ class ImageAddedVC: UIViewController {
         uploadAnotherButton.layer.cornerRadius = 5.0
         uploadAnotherButton.layer.borderColor = UIColor.white.cgColor
         
-        submitButton.layer.borderWidth = 2.0
-        submitButton.layer.cornerRadius = 5.0
-        submitButton.layer.borderColor = UIColor.white.cgColor
+        addCommentsButton.layer.borderWidth = 2.0
+        addCommentsButton.layer.cornerRadius = 5.0
+        addCommentsButton.layer.borderColor = UIColor.white.cgColor
+        
+        nextButton.layer.borderWidth = 2.0
+        nextButton.layer.cornerRadius = 5.0
+        nextButton.layer.borderColor = UIColor.white.cgColor
         
         self.navigationItem.setHidesBackButton(true, animated:true)
     }
@@ -64,15 +71,36 @@ class ImageAddedVC: UIViewController {
         }
     }
     
+    @IBAction func nextButtonPressed(_ sender: Any) {
+        
+        if let navController = self.navigationController, navController.viewControllers.count >= 2 {
+            if let vc = navController.viewControllers[navController.viewControllers.count - 2] as? ImageAttachVC {
+                self.navigationController!.popViewController(animated: true)
+                vc.nextButtonPressed(sender)
+            } else if let vc = navController.viewControllers[navController.viewControllers.count - 2] as? SalesRepImageAttachVC {
+                self.navigationController!.popViewController(animated: true)
+                vc.nextButtonPressed(sender)
+            }
+        }
+    }
+    
+    
     @IBAction func submitButtonPressed(_ sender: Any) {
         if let navController = self.navigationController, navController.viewControllers.count >= 2 {
             if let vc = navController.viewControllers[navController.viewControllers.count - 2] as? ImageAttachVC {
                 self.navigationController!.popViewController(animated: true)
-                vc.uploadButtonPressed(sender)
+                vc.nextButtonPressed(sender)
             } else if let vc = navController.viewControllers[navController.viewControllers.count - 2] as? SalesRepImageAttachVC {
                 self.navigationController!.popViewController(animated: true)
-                vc.submitButtonPressed(sender)
+                vc.nextButtonPressed(sender)
             }
         }        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddComment" {
+            let destVC = segue.destination as! AddCommentsVC
+            destVC.image = image
+        }
     }
 }
